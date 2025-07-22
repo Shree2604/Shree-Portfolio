@@ -30,7 +30,7 @@ const posts: Post[] = [
     content: "Published as a chapter in the book *Industry 5.0* by Springer.",
     date: "April 4, 2025",
     readTime: "25 min",
-    category: "Industry 5.0",
+    category: "Springer Industry 5.0",
     tags: ["Data Analytics", "Industry 5.0", "Machine Learning", "Edge AI", "Federated Learning", "Quantum AI"],
     type: "publication",
     url: "https://link.springer.com/chapter/10.1007/978-3-031-87837-4_5"
@@ -203,7 +203,7 @@ const Blog = () => {
                         </div>
                         <a href={post.url} target="_blank" rel="noopener noreferrer">
                           <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80">
-                            Read on Medium <ArrowRight className="ml-2 h-3 w-3" />
+                            Read Here <ArrowRight className="ml-2 h-3 w-3" />
                           </Button>
                         </a>
                       </div>
