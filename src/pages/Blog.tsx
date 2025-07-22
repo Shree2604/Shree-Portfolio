@@ -26,6 +26,19 @@ interface Post {
 const posts: Post[] = [
   // Publications
   {
+  id: 20,
+  title: "Data Analytics in Industry 5.0: Transforming Processes with Insights",
+  excerpt: "An in-depth chapter exploring the role of data analytics in shaping Industry 5.0, highlighting predictive learning, deep learning, IIoT, edge AI, and future trends like federated and quantum computing.",
+  content: "Published as a chapter in the book *Industry 5.0* by Springer.",
+  date: "April 4, 2025",
+  readTime: "25 min",
+  category: "Industry 5.0",
+  tags: ["Data Analytics", "Industry 5.0", "Machine Learning", "Edge AI", "Federated Learning", "Quantum AI"],
+  type: "publication",
+  url: "https://link.springer.com/chapter/10.1007/978-3-031-87837-4_5"
+}
+
+  {
     id: 1,
     title: "Unveiling the Black Box: A Comprehensive Journey into Explainable AI",
     excerpt: "A detailed exploration of explainable AI methods and their applications.",
