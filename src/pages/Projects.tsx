@@ -101,32 +101,6 @@ const personalProjects = [
   }
 ];
 
-// Professional projects (no external links)
-const professionalProjects = [
-  {
-    id: 1,
-    title: "Generative AI Intern",
-    organization: "ValueDX, Maharashtra, India",
-    period: "Nov 2024 – Apr 2025",
-    details: [
-      "Built patient booking systems with AI-powered symptom analysis and optimized medical workflows, improving operational efficiency by 40% through automated triage and scheduling.",
-      "Developed end-to-end AI document processing pipeline using Python, Transformer models, RAG architecture, LangChain, and Streamlit, automating data extraction and classification for invoices, contracts, and purchase orders with 95% accuracy.",
-      "Designed intelligent document processing systems for Doc-to-Excel conversion and Excel automation, eliminating data redundancy and improving data processing efficiency by 85%.",
-      "Developed an AI system to classify IT support tickets and generate automated responses, with a user interface built in Streamlit."
-    ]
-  },
-  {
-    id: 2,
-    title: "Machine Learning Research Intern",
-    organization: "IIIT SriCity, Andhra Pradesh, India",
-    period: "Dec 2023 – Feb 2024",
-    details: [
-      "Developed smart healthcare ecosystem with IoT sensor integration for real-time patient monitoring.",
-      "Built ensemble machine learning model using Random Forest and XGBoost achieving 87.4% accuracy.",
-      "Implemented explainable AI techniques using SHAP, LIME, and Eli5 for model transparency and interpretability."
-    ]
-  }
-];
 
 const Projects = () => {
   const containerVariants = {
@@ -142,42 +116,6 @@ const Projects = () => {
 
   return (
     <>
-      {/* Professional Projects Section */}
-      <Section
-        title="Professional Projects"
-        subtitle="Industry & research experience applying AI/ML to real-world problems"
-        id="professional-projects"
-        className="min-h-screen"
-      >
-        <div className="container mx-auto px-4 py-8">
-          <motion.div
-            className="grid grid-cols-1 gap-6 md:gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-          >
-            {professionalProjects.map((proj) => (
-              <motion.div
-                key={proj.id}
-                className="bg-white shadow-lg rounded-2xl p-6 border border-gray-200"
-                whileHover={{ scale: 1.02 }}
-              >
-                <h3 className="text-xl font-semibold">{proj.title}</h3>
-                <p className="text-sm text-gray-500">
-                  {proj.organization} • {proj.period}
-                </p>
-                <ul className="list-disc list-inside mt-4 space-y-2 text-gray-700">
-                  {proj.details.map((d, i) => (
-                    <li key={i}>{d}</li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </Section>
-
       {/* Personal Projects Section */}
       <Section
         title="Projects"
