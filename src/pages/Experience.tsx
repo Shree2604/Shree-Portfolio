@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Section from '@/components/Section';
 import { AnimatedCard } from '@/components/AnimatedCard';
@@ -7,14 +6,15 @@ import { cn } from '@/lib/utils';
 
 const experiences = [
   {
-    title: "Agentic AI Intern",
+    title: "Generative AI / Agentic AI Intern",
     company: "ValueDX",
     location: "Maharashtra, India",
-    period: "Nov 2024 - Apr 2025",
+    period: "Nov 2024 – Apr 2025",
     description: [
-      "Working extensively on LangGraph Framework, designing and optimizing autonomous AI systems.",
-      "Contributing to healthcare automation, including patient booking systems and medical workflow optimization.",
-      "Developing AI-driven financial invoice processing for document handling and data extraction."
+      "Built AI-driven patient booking system with symptom analysis; improved operational efficiency by 40% via automated triage and scheduling.",
+      "Developed end-to-end document processing pipeline using Transformer models, RAG architecture, LangChain, and Streamlit to extract and classify invoices, contracts, and purchase orders with 95% accuracy.",
+      "Engineered Doc-to-Excel conversion and Excel automation workflows, eliminating data redundancy and boosting data throughput by 85%.",
+      "Implemented support ticket classification and automated response generation with a Streamlit interface."
     ],
     icon: "🤖",
     color: "from-purple-500/20 to-blue-500/20"
@@ -23,24 +23,24 @@ const experiences = [
     title: "Machine Learning Intern",
     company: "Civicraft",
     location: "Varanasi, India",
-    period: "March 2024 - July 2024",
+    period: "Mar 2024 – Jul 2024",
     description: [
-      "Built Local Language Translation (LLT) models using TensorFlow & PyTorch.",
-      "Integrated multi-lingual speech technology for seamless user interaction.",
-      "Focused on making AI adaptive & user-friendly via voice interaction and multi-format support."
+      "Built local language translation models using TensorFlow and PyTorch to support regional dialects.",
+      "Integrated multilingual speech capabilities to enable voice-driven interaction across languages.",
+      "Enhanced accessibility by adapting AI responses to diverse linguistic inputs and formats."
     ],
     icon: "🌐",
     color: "from-blue-500/20 to-cyan-500/20"
   },
   {
-    title: "ML IoT Research Intern",
-    company: "IIIT Sri City",
+    title: "ML & IoT Research Intern",
+    company: "IIIT SriCity",
     location: "Andhra Pradesh, India",
-    period: "Dec 2023 - Feb 2024",
+    period: "Dec 2023 – Feb 2024",
     description: [
-      "Developed a predictive model for infectious disease forecasting (87.4% accuracy).",
-      "Built an IoT-based health monitoring prototype for real-time data processing.",
-      "Improved model transparency using Eli5, SHAP, and LIME."
+      "Developed a smart healthcare monitoring system with IoT sensor integration for real-time vital tracking.",
+      "Built an ensemble model (Random Forest + XGBoost) achieving 87.4% prediction accuracy for health-related outcomes.",
+      "Applied explainability techniques (SHAP, LIME, Eli5) to surface model reasoning and increase trust."
     ],
     icon: "🔬",
     color: "from-cyan-500/20 to-green-500/20"
@@ -50,20 +50,20 @@ const experiences = [
 const positions = [
   {
     title: "Club Lead",
-    organization: "Epoch (AI/ML Club, IIIT Sri City)",
-    description: "Managing AI/ML events, industry collaborations.",
+    organization: "Epoch (AI/ML Club, IIIT SriCity)",
+    description: "Coordinated AI/ML events and managed industry partnerships.",
     icon: "🧠"
   },
   {
     title: "NSS Design Lead",
-    organization: "IIIT Sri City",
-    description: "Designed posters & content for college events.",
+    organization: "IIIT SriCity",
+    description: "Created visual content and collateral for institutional events.",
     icon: "🎨"
   },
   {
     title: "Sponsorship Lead",
-    organization: "IIIT Sri City",
-    description: "Led sponsorship outreach for annual fest Abhisarga.",
+    organization: "IIIT SriCity",
+    description: "Led outreach and secured sponsors for the annual fest Abhisarga.",
     icon: "💼"
   }
 ];
@@ -76,7 +76,11 @@ const Experience = () => {
   };
 
   return (
-    <Section title="Experience" subtitle="My professional journey in AI/ML research and development" id="experience">
+    <Section
+      title="Experience"
+      subtitle="Professional work and research in applied AI/ML"
+      id="experience"
+    >
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto">
           {/* Work Experience */}
@@ -85,25 +89,27 @@ const Experience = () => {
               <Briefcase className="mr-2 h-5 w-5" />
               Work Experience
             </h3>
-            
+
             <div className="space-y-6">
               {experiences.map((exp, index) => (
-                <AnimatedCard 
+                <AnimatedCard
                   key={index}
                   className="p-6 glass"
                   glowOnHover
                 >
-                  <div 
+                  <div
                     className="cursor-pointer flex justify-between items-start"
                     onClick={() => toggleExpand(index)}
                   >
                     <div className="flex items-start">
-                      <div className={`w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-gradient-to-r ${exp.color}`}>
+                      <div
+                        className={`w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-gradient-to-r ${exp.color}`}
+                      >
                         <span className="text-xl">{exp.icon}</span>
                       </div>
                       <div>
-                        <h4 className="text-xl font-bold">{exp.title}</h4>
-                        <p className="text-muted-foreground">
+                        <h4 className="text-xl font-semibold">{exp.title}</h4>
+                        <p className="text-sm text-muted-foreground">
                           {exp.company} • {exp.location}
                         </p>
                         <p className="text-sm text-muted-foreground/70">
@@ -119,11 +125,13 @@ const Experience = () => {
                       )}
                     </div>
                   </div>
-                  
-                  <div 
+
+                  <div
                     className={cn(
                       "mt-4 pl-16 transition-all duration-300 overflow-hidden",
-                      expandedExperience === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                      expandedExperience === index
+                        ? "max-h-96 opacity-100"
+                        : "max-h-0 opacity-0"
                     )}
                   >
                     <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
@@ -136,22 +144,24 @@ const Experience = () => {
               ))}
             </div>
           </div>
-          
-          {/* Leadership Positions */}
+
+          {/* Positions of Responsibility */}
           <div>
             <h3 className="text-2xl font-bold mb-8">Positions of Responsibility</h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {positions.map((position, index) => (
-                <AnimatedCard 
-                  key={index}
+              {positions.map((position, idx) => (
+                <AnimatedCard
+                  key={idx}
                   className="p-6 h-full flex flex-col"
                   glowOnHover
                 >
                   <div className="mb-4 text-3xl">{position.icon}</div>
-                  <h4 className="text-xl font-bold mb-2">{position.title}</h4>
-                  <p className="text-muted-foreground mb-2">{position.organization}</p>
-                  <p className="text-sm text-muted-foreground/70 mt-auto">{position.description}</p>
+                  <h4 className="text-xl font-semibold mb-1">{position.title}</h4>
+                  <p className="text-sm text-muted-foreground mb-2">{position.organization}</p>
+                  <p className="text-sm text-muted-foreground/70 mt-auto">
+                    {position.description}
+                  </p>
                 </AnimatedCard>
               ))}
             </div>
