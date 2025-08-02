@@ -6,6 +6,34 @@ import { cn } from '@/lib/utils';
 
 const experiences = [
   {
+    title: "AI Dev Intern",
+    company: "Vinfinet Technologies Pvt Ltd",
+    location: "Bengaluru, Karnataka, India · Remote",
+    period: "Jul 2025 – Present",
+    description: [
+      "Developing Generative AI multimodal models for advanced sports analysis.",
+      "Building Agentic AI pipelines using LangGraph, LangChain, and RAG for intelligent decision-making.",
+      "Integrating YOLO-based vision systems with natural language understanding for real-time sports insights.",
+      "Optimizing Python-based workflows for scalable deployment."
+    ],
+    icon: "⚡",
+    color: "from-yellow-500/20 to-orange-500/20"
+  },
+  {
+    title: "Freelance AI Developer",
+    company: "Chennai Innovation Labs & Startups",
+    location: "Chennai, India · Remote",
+    period: "Jan 2025 – Present",
+    description: [
+      "Delivering proof-of-concept (POC) solutions for early-stage startups.",
+      "Developing AI-driven prototypes across computer vision, NLP, and multimodal analysis.",
+      "Collaborating with founders to translate business requirements into technical deliverables.",
+      "Rapid prototyping using Python, LangChain, and cloud-based AI APIs."
+    ],
+    icon: "🚀",
+    color: "from-pink-500/20 to-red-500/20"
+  },
+  {
     title: "Generative AI / Agentic AI Intern",
     company: "ValueDX",
     location: "Maharashtra, India",
