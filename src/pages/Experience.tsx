@@ -21,7 +21,7 @@ const experiences = [
   },
   {
     title: "Freelance AI Developer",
-    company: "Chennai Innovation Labs & Startups",
+    company: "Innovation Labs & Startups",
     location: "Chennai, India · Remote",
     period: "Jan 2025 – Present",
     description: [
@@ -36,7 +36,7 @@ const experiences = [
   {
     title: "Generative AI / Agentic AI Intern",
     company: "ValueDX",
-    location: "Maharashtra, India",
+    location: "Maharashtra, India  · Remote",
     period: "Nov 2024 – Apr 2025",
     description: [
       "Built AI-driven patient booking system with symptom analysis; improved operational efficiency by 40% via automated triage and scheduling.",
@@ -50,7 +50,7 @@ const experiences = [
   {
     title: "Machine Learning Intern",
     company: "Civicraft",
-    location: "Varanasi, India",
+    location: "Varanasi, India  · Remote",
     period: "Mar 2024 – Jul 2024",
     description: [
       "Built local language translation models using TensorFlow and PyTorch to support regional dialects.",
@@ -63,7 +63,7 @@ const experiences = [
   {
     title: "ML & IoT Research Intern",
     company: "IIIT SriCity",
-    location: "Andhra Pradesh, India",
+    location: "Andhra Pradesh, India  · Onsite",
     period: "Dec 2023 – Feb 2024",
     description: [
       "Developed a smart healthcare monitoring system with IoT sensor integration for real-time vital tracking.",
