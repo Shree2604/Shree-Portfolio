@@ -218,7 +218,7 @@ const Index = () => {
                   transition={{ delay: 1.5, duration: 0.7 }}
                 >
                   <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 text-muted-foreground font-orbitron" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-                    Agentic AI Research Enthusiast
+                    AI Research Enthusiast
                   </h2>
                 </motion.div>
                 
@@ -455,7 +455,7 @@ const Index = () => {
             className="max-w-xl mx-auto"
           >
             <p className="text-lg mb-8">
-              I'm currently open to part-time opportunities and collaborations in AI/ML development, Agentic AI, and research projects. Interested in working together? Let's discuss how we can innovate together.
+              I'm currently open to part-time opportunities and collaborations in AI/ML/DS development, Agentic AI, and research projects. Interested in working together? Let's discuss how we can innovate together.
             </p>
             
             <div className="mb-8">
