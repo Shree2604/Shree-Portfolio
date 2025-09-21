@@ -153,7 +153,8 @@ const Contact = () => {
         className="bg-gradient-to-b from-background via-background to-secondary/10"
       >
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Block 1: Contact Information & Social Links */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -167,37 +168,37 @@ const Contact = () => {
               }}
               className="flex justify-center"
             >
-              <AnimatedCard className="p-8 w-full max-w-md" glowOnHover>
+              <AnimatedCard className="p-6 w-full h-fit" glowOnHover>
                 <motion.h3 
-                  className="text-2xl font-bold mb-6 text-gradient text-center"
+                  className="text-xl font-bold mb-4 text-gradient text-center"
                   variants={fadeInUp}
                 >
                   Get In Touch 🚀
                 </motion.h3>
                 <motion.p 
-                  className="text-muted-foreground mb-8 text-center"
+                  className="text-muted-foreground mb-6 text-center text-sm"
                   variants={fadeInUp}
                 >
-                  I'm always excited to discuss new projects, research collaborations, or opportunities in AI/ML development. With my current roles as Research Associate at EIDS Lab and AI Dev Intern at Vinfinet Technologies, I'm particularly interested in connecting with organizations working on Federated Learning, Explainable AI, Edge AI Optimization, and Healthcare AI Innovation. Feel free to reach out through any of the channels below.
+                  I'm always excited to discuss new projects, research collaborations, or opportunities in AI/ML development. Feel free to reach out through any of the channels below.
                 </motion.p>
                 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {socialLinks.map((link, index) => (
-                    <motion.div key={index} variants={fadeInUp} className="flex justify-center">
+                    <motion.div key={index} variants={fadeInUp}>
                       <a 
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block w-full"
                       >
-                        <AnimatedCard className="p-4 hover:bg-primary/5 transition-all duration-300">
+                        <AnimatedCard className="p-3 hover:bg-primary/5 transition-all duration-300">
                           <div className="flex items-center">
-                            <div className={`${link.color} p-2 rounded-full mr-4`}>
+                            <div className={`${link.color} p-2 rounded-full mr-3`}>
                               {link.icon}
                             </div>
                             <div>
-                              <div className="font-medium">{link.label}</div>
-                              <div className="text-sm text-muted-foreground">{link.value}</div>
+                              <div className="font-medium text-sm">{link.label}</div>
+                              <div className="text-xs text-muted-foreground">{link.value}</div>
                             </div>
                           </div>
                         </AnimatedCard>
@@ -205,31 +206,57 @@ const Contact = () => {
                     </motion.div>
                   ))}
                 </div>
-                
-                <motion.div 
-                  className="mt-8 text-center"
+              </AnimatedCard>
+            </motion.div>
+
+            {/* Block 2: Current Focus & Professional Status */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="flex justify-center"
+            >
+              <AnimatedCard className="p-6 w-full h-fit" glowOnHover>
+                <motion.h3 
+                  className="text-xl font-bold mb-4 text-gradient text-center"
                   variants={fadeInUp}
                 >
-                  <h4 className="text-lg font-semibold mb-3">Current Focus & Availability 📊</h4>
-                  <p className="text-muted-foreground mb-4">
-                    Currently serving as a Research Associate at EIDS Lab, IIIT SriCity, where I lead research in
-                    <span className="text-primary font-medium"> Federated Learning</span>,
-                    <span className="text-primary font-medium"> Explainable AI</span>, and
-                    <span className="text-primary font-medium"> Edge AI Optimization</span>.
-                    Simultaneously working as an AI Dev Intern at Vinfinet Technologies developing Generative AI multimodal models for sports analysis.
-                  </p>
-                  <p className="text-muted-foreground">
-                    I'm currently open to
-                    <span className="text-primary font-medium"> Full-Time opportunities</span> in
-                    <span className="text-primary font-medium"> AI/ML Research</span>,
-                    <span className="text-primary font-medium"> Agentic AI Development</span>, and
-                    <span className="text-primary font-medium"> Healthcare AI Innovation</span>.
-                    Also interested in research collaborations and consulting opportunities in IoT-Enabled Healthcare and Smart Systems.
-                  </p>
+                  Current Focus 📊
+                </motion.h3>
+                <motion.div className="space-y-4" variants={fadeInUp}>
+                  <div className="text-center">
+                    <h4 className="text-sm font-semibold mb-2 text-primary">Research Associate</h4>
+                    <p className="text-muted-foreground text-xs mb-3">
+                      EIDS Lab, IIIT SriCity - Leading research in
+                      <span className="text-primary font-medium"> Federated Learning</span>,
+                      <span className="text-primary font-medium"> Explainable AI</span>, and
+                      <span className="text-primary font-medium"> Edge AI Optimization</span>.
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <h4 className="text-sm font-semibold mb-2 text-primary">AI Dev Intern</h4>
+                    <p className="text-muted-foreground text-xs mb-3">
+                      Vinfinet Technologies - Developing Generative AI multimodal models for sports analysis and performance optimization.
+                    </p>
+                  </div>
+
+                  <div className="text-center">
+                    <h4 className="text-sm font-semibold mb-2 text-primary">Open to Opportunities</h4>
+                    <p className="text-muted-foreground text-xs">
+                      Currently seeking
+                      <span className="text-primary font-medium"> Full-Time positions</span> in
+                      <span className="text-primary font-medium"> AI/ML Research</span>,
+                      <span className="text-primary font-medium"> Agentic AI Development</span>, and
+                      <span className="text-primary font-medium"> Healthcare AI Innovation</span>.
+                    </p>
+                  </div>
                 </motion.div>
               </AnimatedCard>
             </motion.div>
             
+            {/* Block 3: Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -237,12 +264,12 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex justify-center"
             >
-              <AnimatedCard className="p-8 w-full max-w-md" glowOnHover>
-                <h3 className="text-2xl font-bold mb-6 text-gradient text-center">Send a Message</h3>
+              <AnimatedCard className="p-6 w-full h-fit" glowOnHover>
+                <h3 className="text-xl font-bold mb-4 text-gradient text-center">Send a Message</h3>
                 
-                <form onSubmit={handleSubmit} className="space-y-6" data-testid="contact-form">
+                <form onSubmit={handleSubmit} className="space-y-4" data-testid="contact-form">
                   <div>
-                    <label htmlFor="from_name" className="block text-sm font-medium mb-2">
+                    <label htmlFor="from_name" className="block text-xs font-medium mb-1">
                       Name
                     </label>
                     <Input
@@ -251,12 +278,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Your name"
-                      className="bg-secondary/10 border-secondary/20 focus:border-primary"
+                      className="bg-secondary/10 border-secondary/20 focus:border-primary text-sm"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="reply_to" className="block text-sm font-medium mb-2">
+                    <label htmlFor="reply_to" className="block text-xs font-medium mb-1">
                       Email
                     </label>
                     <Input
@@ -266,12 +293,12 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Your email address"
-                      className="bg-secondary/10 border-secondary/20 focus:border-primary"
+                      className="bg-secondary/10 border-secondary/20 focus:border-primary text-sm"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                    <label htmlFor="subject" className="block text-xs font-medium mb-1">
                       Subject
                     </label>
                     <Input
@@ -280,12 +307,12 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder="Subject of your message"
-                      className="bg-secondary/10 border-secondary/20 focus:border-primary"
+                      className="bg-secondary/10 border-secondary/20 focus:border-primary text-sm"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    <label htmlFor="message" className="block text-xs font-medium mb-1">
                       Message
                     </label>
                     <Textarea
@@ -294,14 +321,14 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Your message"
-                      className="bg-secondary/10 border-secondary/20 focus:border-primary resize-none"
+                      className="bg-secondary/10 border-secondary/20 focus:border-primary resize-none text-sm h-20"
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full" disabled={isLoading}>
+                  <Button type="submit" className="w-full text-sm" disabled={isLoading}>
                     {isLoading ? (
                       <span className="flex items-center">
-                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
@@ -309,14 +336,13 @@ const Contact = () => {
                       </span>
                     ) : (
                       <span className="flex items-center">
-                        <Send className="mr-2 h-4 w-4" />
+                        <Send className="mr-2 h-3 w-3" />
                         Send Message
                       </span>
                     )}
                   </Button>
-                  <div className="text-xs text-center text-muted-foreground pt-2">
-                    Your message will be sent directly to shree.xai.dev@gmail.com.
-                    Please fill out all fields to ensure your message is delivered.
+                  <div className="text-xs text-center text-muted-foreground pt-1">
+                    Your message will be sent directly to shree.xai.dev@gmail.com
                   </div>
                 </form>
               </AnimatedCard>
