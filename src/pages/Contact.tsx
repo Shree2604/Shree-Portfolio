@@ -153,7 +153,7 @@ const Contact = () => {
         className="bg-gradient-to-b from-background via-background to-secondary/10"
       >
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             {/* Block 1: Contact Information & Social Links */}
             <motion.div
               initial="hidden"
@@ -168,24 +168,24 @@ const Contact = () => {
               }}
               className="flex justify-center"
             >
-              <AnimatedCard className="p-6 w-full h-fit" glowOnHover>
-                <motion.h3 
+              <AnimatedCard className="p-6 w-full h-full min-h-[480px] flex flex-col" glowOnHover>
+                <motion.h3
                   className="text-xl font-bold mb-4 text-gradient text-center"
                   variants={fadeInUp}
                 >
                   Get In Touch 🚀
                 </motion.h3>
-                <motion.p 
-                  className="text-muted-foreground mb-6 text-center text-sm"
+                <motion.p
+                  className="text-muted-foreground mb-6 text-center text-sm flex-grow"
                   variants={fadeInUp}
                 >
                   I'm always excited to discuss new projects, research collaborations, or opportunities in AI/ML development. Feel free to reach out through any of the channels below.
                 </motion.p>
-                
-                <div className="space-y-3">
+
+                <div className="space-y-3 flex-grow flex flex-col justify-center">
                   {socialLinks.map((link, index) => (
                     <motion.div key={index} variants={fadeInUp}>
-                      <a 
+                      <a
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -217,15 +217,15 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="flex justify-center"
             >
-              <AnimatedCard className="p-6 w-full h-fit" glowOnHover>
-                <motion.h3 
+              <AnimatedCard className="p-6 w-full h-full min-h-[480px] flex flex-col" glowOnHover>
+                <motion.h3
                   className="text-xl font-bold mb-4 text-gradient text-center"
                   variants={fadeInUp}
                 >
                   Current Focus 📊
                 </motion.h3>
-                <motion.div className="space-y-4" variants={fadeInUp}>
-                  <div className="text-center">
+                <motion.div className="space-y-4 flex-grow flex flex-col justify-center" variants={fadeInUp}>
+                  <div className="text-center flex-grow flex flex-col justify-center">
                     <h4 className="text-sm font-semibold mb-2 text-primary">Research Associate</h4>
                     <p className="text-muted-foreground text-xs mb-3">
                       EIDS Lab, IIIT SriCity - Leading research in
@@ -234,15 +234,15 @@ const Contact = () => {
                       <span className="text-primary font-medium"> Edge AI Optimization</span>.
                     </p>
                   </div>
-                  
-                  <div className="text-center">
+
+                  <div className="text-center flex-grow flex flex-col justify-center">
                     <h4 className="text-sm font-semibold mb-2 text-primary">AI Dev Intern</h4>
                     <p className="text-muted-foreground text-xs mb-3">
                       Vinfinet Technologies - Developing Generative AI multimodal models for sports analysis and performance optimization.
                     </p>
                   </div>
 
-                  <div className="text-center">
+                  <div className="text-center flex-grow flex flex-col justify-center">
                     <h4 className="text-sm font-semibold mb-2 text-primary">Open to Opportunities</h4>
                     <p className="text-muted-foreground text-xs">
                       Currently seeking
@@ -255,7 +255,7 @@ const Contact = () => {
                 </motion.div>
               </AnimatedCard>
             </motion.div>
-            
+
             {/* Block 3: Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -264,11 +264,11 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex justify-center"
             >
-              <AnimatedCard className="p-6 w-full h-fit" glowOnHover>
+              <AnimatedCard className="p-6 w-full h-full min-h-[480px] flex flex-col" glowOnHover>
                 <h3 className="text-xl font-bold mb-4 text-gradient text-center">Send a Message</h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-4" data-testid="contact-form">
-                  <div>
+
+                <form onSubmit={handleSubmit} className="space-y-4 flex-grow flex flex-col justify-center" data-testid="contact-form">
+                  <div className="flex-grow flex flex-col justify-center">
                     <label htmlFor="from_name" className="block text-xs font-medium mb-1">
                       Name
                     </label>
@@ -282,7 +282,7 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  <div>
+                  <div className="flex-grow flex flex-col justify-center">
                     <label htmlFor="reply_to" className="block text-xs font-medium mb-1">
                       Email
                     </label>
@@ -297,7 +297,7 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  <div>
+                  <div className="flex-grow flex flex-col justify-center">
                     <label htmlFor="subject" className="block text-xs font-medium mb-1">
                       Subject
                     </label>
@@ -311,7 +311,7 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  <div>
+                  <div className="flex-grow flex flex-col justify-center">
                     <label htmlFor="message" className="block text-xs font-medium mb-1">
                       Message
                     </label>
@@ -325,22 +325,24 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full text-sm" disabled={isLoading}>
-                    {isLoading ? (
-                      <span className="flex items-center">
-                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Sending...
-                      </span>
-                    ) : (
-                      <span className="flex items-center">
-                        <Send className="mr-2 h-3 w-3" />
-                        Send Message
-                      </span>
-                    )}
-                  </Button>
+                  <div className="flex-grow flex flex-col justify-center">
+                    <Button type="submit" className="w-full text-sm" disabled={isLoading}>
+                      {isLoading ? (
+                        <span className="flex items-center">
+                          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Sending...
+                        </span>
+                      ) : (
+                        <span className="flex items-center">
+                          <Send className="mr-2 h-3 w-3" />
+                          Send Message
+                        </span>
+                      )}
+                    </Button>
+                  </div>
                   <div className="text-xs text-center text-muted-foreground pt-1">
                     Your message will be sent directly to shree.xai.dev@gmail.com
                   </div>
