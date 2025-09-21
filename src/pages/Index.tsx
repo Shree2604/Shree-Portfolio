@@ -22,13 +22,6 @@ const featuredProjects = [
     // image removed
   },
   {
-    title: "Face Recognition for Attendance",
-    description: "Haar Cascade-based face recognition system with 95% accuracy for automated attendance tracking.",
-    tags: ["OpenCV", "Computer Vision", "TensorFlow"],
-    github: "https://github.com/Shree2604/Face-Recognition-for-Attendance-Systems",
-    // image removed
-  },
-  {
     title: "Lyric Loom",
     description: "Full-stack music platform with B2C interface and B2B partner API integration.",
     tags: ["React", "Node.js", "MongoDB"],
@@ -44,14 +37,12 @@ const featuredPosts = [
     type: "research",
     title: "X-FedWCluster: Explainable Federated Learning for Proactive Health Monitoring of Underground Miners via UAV Networks",
     excerpt: "Accepted in IEEE ICCCNT 2025 conference - A novel federated learning approach for underground miner health monitoring using UAV networks.",
-    url: "#",
     date: "2025"
   },
   {
     type: "research",
     title: "An Explainable AI System for Real-Time Disease Prediction in IoT-Enabled Smart Healthcare",
     excerpt: "Accepted in ITI 2025 conference - Real-time disease prediction system with explainable AI for smart healthcare applications.",
-    url: "#",
     date: "2025"
   },
 
@@ -400,20 +391,6 @@ const Index = () => {
                     </div>
                     <h3 className="text-xl font-bold mb-2">{post.title}</h3>
                     <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-                    
-                    <div className="mt-auto pt-2">
-                      <a
-                        href={post.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block w-full"
-                      >
-                        <Button variant="outline" size="sm" className="w-full">
-                          Read on Medium
-                          <ArrowRight className="ml-1 h-3 w-3" />
-                        </Button>
-                      </a>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
