@@ -22,6 +22,7 @@ const About = () => {
 
   // Array of profile images for the carousel
   const profileImages = [
+    "/images/DSC_6056.JPG",
     "/images/DSC_6794.JPG",
     "/images/DSC_0540.JPG",
     "/images/HI.JPG",
