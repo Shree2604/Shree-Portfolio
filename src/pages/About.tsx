@@ -1,10 +1,7 @@
-
 import { useState, useEffect } from 'react';
 import Section from '@/components/Section';
 import { AnimatedCard } from '@/components/AnimatedCard';
-import SkillBadge from '@/components/SkillBadge';
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import { RESUME_URL } from '@/config/constants';
@@ -17,10 +14,8 @@ import {
 } from "@/components/ui/carousel";
 
 const About = () => {
-  const [activeTimelineItem, setActiveTimelineItem] = useState(0);
   const [autoPlayEnabled, setAutoPlayEnabled] = useState(true);
 
-  // Array of profile images for the carousel
   const profileImages = [
     "/images/DSC_6056.JPG",
     "/images/DSC_6794.JPG",
@@ -31,14 +26,6 @@ const About = () => {
     "/images/DSC_6055.JPG",
     "/images/DSC_6056.JPG"
   ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTimelineItem((prev) => (prev + 1) % timelineItems.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     let interval: number;
@@ -92,7 +79,7 @@ const About = () => {
                               whileInView={{ opacity: 0.6 }}
                               viewport={{ once: true }}
                               transition={{ duration: 0.5, delay: 0.3 }}
-                            ></motion.div>
+                            />
                           </div>
                         </CarouselItem>
                       ))}
@@ -114,7 +101,7 @@ const About = () => {
               >
                 <h2 className="text-3xl font-bold mb-3">Shreeraj Mummidivarapu</h2>
                 <p className="text-lg text-muted-foreground mb-4">
-                  AI/ML Developer & Researcher
+                  Edge AI Developer & Researcher
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-2 mb-4">
                   <a 
@@ -172,105 +159,6 @@ const About = () => {
               </motion.div>
             </div>
           </div>
-          
-          {/* Skills Section */}
-          <div className="mb-16">
-            <motion.h3 
-              className="text-3xl font-bold mb-8 text-center text-gradient inline-block w-full"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              Skills & Expertise
-            </motion.h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {skillGroups.map((group, index) => (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 * index }}
-                >
-                  <AnimatedCard className="p-6 h-full" glowOnHover>
-                    <h4 className="text-xl font-semibold mb-4">{group.title}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {group.skills.map((skill) => (
-                        <SkillBadge name={skill} />
-                      ))}
-                    </div>
-                  </AnimatedCard>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-          
-          <div className="mt-20">
-            <motion.h3 
-              className="text-2xl font-bold mb-10 text-center text-gradient inline-block"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              Education & Experience Timeline
-            </motion.h3>
-            <div className="relative">
-              {/* Timeline line */}
-              <motion.div 
-                className="absolute top-0 left-1/2 w-0.5 h-full bg-primary/30 transform -translate-x-1/2"
-                initial={{ scaleY: 0, opacity: 0 }}
-                whileInView={{ scaleY: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-              ></motion.div>
-              
-              {/* Timeline items */}
-              <div className="space-y-12">
-                {timelineItems.map((item, index) => (
-                  <div key={index} className="relative">
-                    <motion.div 
-                      className={cn(
-                        "absolute left-1/2 w-10 h-10 rounded-full flex items-center justify-center -translate-x-1/2 z-10 transition-all duration-500",
-                        activeTimelineItem === index 
-                          ? "bg-primary text-white shadow-lg shadow-primary/30" 
-                          : "bg-secondary text-primary"
-                      )}
-                      initial={{ scale: 0, opacity: 0 }}
-                      whileInView={{ scale: 1, opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.1 * index }}
-                    >
-                      {item.icon}
-                    </motion.div>
-                    <motion.div 
-                      className={cn(
-                        "ml-auto md:ml-0 md:mr-auto md:pr-12 md:text-right w-full md:w-1/2 pl-16 md:pl-0 relative transition-opacity duration-500",
-                        index % 2 === 1 && "md:ml-auto md:mr-0 md:pr-0 md:pl-12 md:text-left",
-                        activeTimelineItem === index ? "opacity-100" : "opacity-60"
-                      )}
-                      initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.2 * index }}
-                    >
-                      <AnimatedCard 
-                        className="p-6" 
-                        glowOnHover={activeTimelineItem === index}
-                      >
-                        <div className="text-sm font-semibold text-primary mb-2">{item.year}</div>
-                        <h4 className="text-xl font-bold mb-1">{item.title}</h4>
-                        <p className="text-muted-foreground">{item.subtitle}</p>
-                        <p className="mt-2 text-sm">{item.details}</p>
-                      </AnimatedCard>
-                    </motion.div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
       </Section>
       <Footer />
     </>
