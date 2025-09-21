@@ -23,8 +23,7 @@ const About = () => {
     "/images/HI.JPG",
     "/images/DSC_0452.JPG",
     "/images/DSC_0454.JPG",
-    "/images/DSC_6055.JPG",
-    "/images/DSC_6056.JPG"
+    "/images/DSC_6055.JPG"
   ];
 
   useEffect(() => {
@@ -159,6 +158,7 @@ const About = () => {
               </motion.div>
             </div>
           </div>
+        </div> {/* ✅ closes container */}
       </Section>
       <Footer />
     </>
