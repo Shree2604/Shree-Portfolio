@@ -25,7 +25,10 @@ const About = () => {
     "/images/DSC_6794.JPG",
     "/images/DSC_0540.JPG",
     "/images/HI.JPG",
-    "/images/DSC_0452.JPG"
+    "/images/DSC_0452.JPG",
+    "/images/DSC_0454.JPG",
+    "/images/DSC_6055.JPG",
+    "/images/DSC_6056.JPG"
   ];
 
   useEffect(() => {
@@ -82,21 +85,35 @@ const About = () => {
       icon: "🎓"
     },
     {
-      year: "Nov 2024-Apr 2025",
-      title: "Agentic AI Intern",
-      subtitle: "ValueDX, Maharashtra, India",
-      details: "Working on LangGraph Framework and healthcare automation",
-      icon: "💼"
+      year: "Jul 2025 – Present",
+      title: "AI Dev Intern",
+      subtitle: "Vinfinet Technologies Pvt Ltd",
+      details: "Developing Generative AI multimodal models for advanced sports analysis",
+      icon: "⚡"
     },
     {
-      year: "Mar-Jul 2024",
-      title: "Machine Learning Intern",
-      subtitle: "Civicraft, Varanasi, India",
-      details: "Built Local Language Translation models using TensorFlow & PyTorch",
+      year: "Jan 2025 – Present",
+      title: "Freelance AI Developer",
+      subtitle: "Innovation Labs & Startups",
+      details: "Delivering proof-of-concept solutions for early-stage startups",
+      icon: "🚀"
+    },
+    {
+      year: "Nov 2024 – Apr 2025",
+      title: "Generative AI / Agentic AI Intern",
+      subtitle: "ValueDX, Maharashtra, India",
+      details: "Built AI-driven patient booking system and document processing pipeline",
       icon: "🤖"
     },
     {
-      year: "Dec 2023-Feb 2024",
+      year: "Mar 2024 – Jul 2024",
+      title: "Machine Learning Intern",
+      subtitle: "Civicraft, Varanasi, India",
+      details: "Built local language translation models using TensorFlow & PyTorch",
+      icon: "🌐"
+    },
+    {
+      year: "Dec 2023 – Feb 2024",
       title: "ML IoT Research Intern",
       subtitle: "IIIT Sri City, Andhra Pradesh, India",
       details: "Developed predictive model for infectious disease forecasting (87.4% accuracy)",

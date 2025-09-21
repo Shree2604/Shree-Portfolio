@@ -7,29 +7,23 @@ import { cn } from '@/lib/utils';
 
 const achievements = [
   {
-    title: "Organized & led BIT N BUILD",
-    description: "Successfully organized and led an international hackathon at IIIT Sri City, which attracted participants from multiple countries and showcased innovative projects.",
-    icon: "🏆",
-    color: "from-yellow-500/20 to-orange-500/20"
+    title: "Published 3 Quality Research Papers",
+    description: "Published research papers in IEEE ICCCNT 2025, ITI 2025 conferences, and contributed to Springer book chapter on Industry 5.0 data analytics covering Federated Learning, AI/ML, and Explainable AI.",
+    icon: "📚",
+    color: "from-green-500/20 to-emerald-500/20"
   },
   {
-    title: "Top 1% in GCCP Cloud Campaign 2024",
-    description: "Ranked among the top 1% of participants in the Google Cloud Computing Platform Cloud Campaign 2024, demonstrating advanced proficiency in cloud technologies.",
-    icon: "☁️",
-    color: "from-blue-500/20 to-indigo-500/20"
+    title: "Top 10 in International Healthcare Hackathon",
+    description: "Secured a top 10 position among teams in an international healthcare hackathon, developing innovative AI/ML-powered healthcare solutions that addressed real-world medical challenges.",
+    icon: "🏥",
+    color: "from-purple-500/20 to-pink-500/20"
   },
-  {
-    title: "Top 10 in Thryve Digital National Healthcare Hackathon 2023",
-    description: "Secured a top 10 position in the Thryve Digital National Healthcare Hackathon 2023, developing innovative healthcare solutions using AI/ML technologies.",
-    icon: "🏅",
-    color: "from-red-500/20 to-purple-500/20"
-  }
 ];
 
 const otherAchievements = [
   "Recognized for contributions to open-source AI projects",
   "Led successful AI workshops for beginners",
-  "Published research paper on predictive disease modeling",
+  "Mentored junior developers in AI/ML technologies",
   "Created popular educational content on AI/ML concepts"
 ];
 

@@ -6,6 +6,20 @@ import { cn } from '@/lib/utils';
 
 const experiences = [
   {
+    title: "Research Associate",
+    company: "EIDS Lab, IIIT SriCity",
+    location: "Andhra Pradesh, India · Onsite",
+    period: "Sep 2025 – Present",
+    description: [
+      "Leading research initiatives in Federated Learning and Explainable AI applications for critical systems.",
+      "Developing Edge AI Optimization techniques for resource-constrained environments and real-time processing.",
+      "Researching UAV Networks for disaster management, focusing on autonomous coordination and communication protocols.",
+      "Collaborating with interdisciplinary teams to develop AI solutions for emergency response and crisis management."
+    ],
+    icon: "🚁",
+    color: "from-green-500/20 to-teal-500/20"
+  },
+  {
     title: "AI Dev Intern",
     company: "Vinfinet Technologies Pvt Ltd",
     location: "Bengaluru, Karnataka, India · Remote",

@@ -22,13 +22,6 @@ const featuredProjects = [
     // image removed
   },
   {
-    title: "Intelligent Healthcare",
-    description: "Smart healthcare ecosystem for real-time monitoring with explainable AI.",
-    tags: ["Explainable AI", "ML Models", "XGBoost"],
-    github: "https://github.com/Shree2604/ML-Internship-Task",
-    // image removed
-  },
-  {
     title: "Face Recognition for Attendance",
     description: "Haar Cascade-based face recognition system with 95% accuracy for automated attendance tracking.",
     tags: ["OpenCV", "Computer Vision", "TensorFlow"],
@@ -48,29 +41,23 @@ const featuredProjects = [
 // Featured blog posts and publications
 const featuredPosts = [
   {
-    type: "publication",
-    title: "Unveiling the Black Box: A Comprehensive Journey into Explainable AI",
-    excerpt: "A detailed exploration of explainable AI methods and their applications.",
-    url: "https://medium.com/epochiiits/unveiling-the-black-box-a-comprehensive-journey-into-explainable-ai-fd0bd017b70c",
-    date: "May 15, 2023"
+    type: "research",
+    title: "X-FedWCluster: Explainable Federated Learning for Proactive Health Monitoring of Underground Miners via UAV Networks",
+    excerpt: "Accepted in IEEE ICCCNT 2025 conference - A novel federated learning approach for underground miner health monitoring using UAV networks.",
+    url: "#",
+    date: "2025"
   },
   {
-    type: "publication",
-    title: "Creating Artistic Outlines: Combining Python, OpenCV, and Turtle Graphics",
-    excerpt: "Innovative approach to artistic image processing with Python libraries.",
-    url: "https://medium.com/epochiiits/creating-artistic-outlines-combining-python-opencv-and-turtle-graphics-178a1faab856",
-    date: "January 22, 2024"
+    type: "research",
+    title: "An Explainable AI System for Real-Time Disease Prediction in IoT-Enabled Smart Healthcare",
+    excerpt: "Accepted in ITI 2025 conference - Real-time disease prediction system with explainable AI for smart healthcare applications.",
+    url: "#",
+    date: "2025"
   },
-  {
-    type: "publication",
-    title: "Explainable AI for Communicable Disease Prediction",
-    excerpt: "A breakthrough approach using explainable AI for healthcare predictions.",
-    url: "https://medium.com/@shreeraj260405/explainable-ai-for-communicable-disease-prediction-a-breakthrough-in-healthcare-technology-662d66efcdb3",
-    date: "December 8, 2023"
-  }
+
 ];
 
-
+// Skills
 const skills = [
   // Programming Languages
   "Python", "C++", "Java", "SQL",
@@ -83,6 +70,10 @@ const skills = [
   // Machine Learning & AI
   "TensorFlow", "PyTorch", "Scikit-Learn", "NumPy", "Pandas", "LangChain",
   "LangGraph", "LLMs", "Computer Vision", "Natural Language Processing", "MLOps",
+  "Federated Learning", "Explainable AI", "Edge AI Optimization", "UAV Networks",
+
+  // Research Areas
+  "IoT-Enabled Healthcare", "Underground Mining Safety", "Smart Healthcare Systems",
 
   // Relevant Coursework
   "Data Structures", "OOPS", "Operating Systems", "DBMS",
@@ -96,26 +87,26 @@ const skills = [
 const coursework = [
   {
     type: "Specialization",
-    title: "Deep Learning Specialization",
+    title: "Machine Learning Specialization",
     provider: "Coursera, Andrew Ng",
     credentialLink: "#"
   },
   {
     type: "Specialization",
-    title: "Machine Learning Engineering for Production (MLOps)",
-    provider: "Coursera, DeepLearning.AI",
+    title: "Deep Learning Specialization",
+    provider: "Coursera, Andrew Ng",
     credentialLink: "#"
   },
   {
     type: "Course",
-    title: "Generative AI with Large Language Models",
-    provider: "Coursera, DeepLearning.AI",
+    title: "Langchain 101",
+    provider: "Langchain Academy",
     credentialLink: "#"
   },
   {
-    type: "Certification",
-    title: "TensorFlow Developer Certification",
-    provider: "Google",
+    type: "Course",
+    title: "Langgraph 101",
+    provider: "Langgraph Academy",
     credentialLink: "#"
   }
 ];
@@ -218,7 +209,7 @@ const Index = () => {
                   transition={{ delay: 1.5, duration: 0.7 }}
                 >
                   <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 text-muted-foreground font-orbitron" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-                    AI Research Enthusiast
+                    Edge AI Researcher 
                   </h2>
                 </motion.div>
                 
@@ -229,7 +220,7 @@ const Index = () => {
                   className="w-full max-w-xl mx-auto"
                 >
                   <div className="text-primary text-lg md:text-xl lg:text-2xl mb-8" style={{ textShadow: '0 0 8px rgba(14, 165, 233, 0.5)' }}>
-                    Turning AI Innovations into Real-World Impact
+                   Making AI Accessible to Everyone
                   </div>
                 </motion.div>
               </div>
@@ -376,15 +367,6 @@ const Index = () => {
                     </div>
                     <h3 className="text-lg font-bold mb-2">{course.title}</h3>
                     <p className="text-muted-foreground mb-4">{course.provider}</p>
-                    <a 
-                      href={course.credentialLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm text-primary hover:underline"
-                    >
-                      View Credentials
-                      <ArrowRight className="ml-1 h-3 w-3" />
-                    </a>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -394,7 +376,7 @@ const Index = () => {
       </Section>
 
       {/* Featured Articles Section - renamed to "Featured Publications & Blogs" */}
-      <Section title="Featured Publications & Blogs" subtitle="Insights and research contributions in AI and technology" className="bg-gradient-to-b from-background/95 to-secondary/5">
+      <Section title="Featured Research & Publications" subtitle="Research papers, publications and insights in AI and technology" className="bg-gradient-to-b from-background/95 to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {featuredPosts.map((post, index) => (
@@ -407,8 +389,12 @@ const Index = () => {
                 <Card className="h-full">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-center mb-2">
-                      <span className={`${post.type === "publication" ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300" : "bg-primary/20 text-primary"} text-xs px-2 py-1 rounded`}>
-                        {post.type === "publication" ? "Publication" : "Blog Post"}
+                      <span className={`${
+                        post.type === "research" ? "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300" :
+                        post.type === "publication" ? "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300" :
+                        "bg-primary/20 text-primary"
+                      } text-xs px-2 py-1 rounded`}>
+                        {post.type === "research" ? "Research Paper" : post.type === "publication" ? "Publication" : "Blog Post"}
                       </span>
                       <span className="text-sm text-muted-foreground">{post.date}</span>
                     </div>
@@ -437,7 +423,7 @@ const Index = () => {
           <div className="text-center mt-8">
             <Link to="/blog">
               <Button>
-                View All Publications & Blogs
+                View All Research & Publications
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -455,7 +441,7 @@ const Index = () => {
             className="max-w-xl mx-auto"
           >
             <p className="text-lg mb-8">
-              I'm currently open to part-time opportunities and collaborations in AI/ML/DS development, Agentic AI, and research projects. Interested in working together? Let's discuss how we can innovate together.
+              I'm currently open to Full-Time and Part-Time opportunities and collaborations in AI/ML/DS Development, Agentic AI, and Research Projects. Interested in working together? Let's discuss how we can innovate together.
             </p>
             
             <div className="mb-8">

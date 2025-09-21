@@ -24,6 +24,30 @@ interface Post {
 // Sample publications and blog posts data
 const posts: Post[] = [
   {
+    id: 10,
+    title: "X-FedWCluster: Explainable Federated Learning for Proactive Health Monitoring of Underground Miners via UAV Networks",
+    excerpt: "Accepted in IEEE ICCCNT 2025 conference - A novel federated learning approach for underground miner health monitoring using UAV networks.",
+    content: "Research paper accepted in IEEE International Conference on Computer Communication and Networks Technology (ICCCNT) 2025.",
+    date: "2025",
+    readTime: "15 min",
+    category: "IEEE ICCCNT 2025",
+    tags: ["Federated Learning", "Explainable AI", "UAV Networks", "Healthcare", "Mining Safety"],
+    type: "publication",
+    url: "#"
+  },
+  {
+    id: 11,
+    title: "An Explainable AI System for Real-Time Disease Prediction in IoT-Enabled Smart Healthcare",
+    excerpt: "Accepted in ITI 2025 conference - Real-time disease prediction system with explainable AI for smart healthcare applications.",
+    content: "Research paper accepted in International Conference on Information Technology and Intelligent Systems (ITI) 2025.",
+    date: "2025",
+    readTime: "18 min",
+    category: "ITI 2025",
+    tags: ["Explainable AI", "IoT", "Healthcare", "Disease Prediction", "Real-time Systems"],
+    type: "publication",
+    url: "#"
+  },
+  {
     id: 1,
     title: "Data Analytics in Industry 5.0: Transforming Processes with Insights",
     excerpt: "An in-depth chapter exploring the role of data analytics in shaping Industry 5.0, highlighting predictive learning, deep learning, IIoT, edge AI, and future trends like federated and quantum computing.",

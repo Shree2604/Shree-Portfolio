@@ -97,8 +97,20 @@ const personalProjects = [
     category: "AI/LLM",
     role: "Lead Developer",
     problem: "Writing persuasive, platform-aligned ad copy manually is slow, error-prone, and hard to scale—especially across multiple tones and campaign styles.",
-    impact: "Boosted copywriting productivity by 70% and increased CTR by 40% in testing campaigns using AI-generated content tuned to each platform."
-  }
+  },
+  {
+    id: 8,
+    title: "Interview Registration Platform",
+    description: "Modern, responsive interview registration application with MongoDB backend storage and intelligent file upload capabilities. Features multi-step registration process with automatic resume text extraction and analysis.",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Mongoose", "Multer", "Mammoth.js"],
+    githubUrl: "https://github.com/Shree2604/interview-platform",
+    liveUrl: null,
+    details: "This full-stack application streamlines the interview registration process with a sophisticated multi-step workflow. It automatically extracts and analyzes resume content from .docx files, identifies key information like skills, experience, and education. The system includes secure file handling, real-time processing feedback, and a comprehensive admin dashboard for managing registrations.",
+    category: "Web Development",
+    role: "Full Stack Developer",
+    problem: "Traditional interview registration processes are time-consuming and lack intelligent data extraction from resumes. Companies need an efficient system to handle candidate information automatically.",
+    impact: "Streamlined interview registration process, reduced manual data entry by 90%, and improved candidate experience with automated resume processing and real-time feedback."
+  },
 ];
 
 
