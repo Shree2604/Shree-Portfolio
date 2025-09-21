@@ -18,13 +18,21 @@ const achievements = [
     icon: "🏥",
     color: "from-purple-500/20 to-pink-500/20"
   },
+  {
+    title: "Led & Organized International BitNBuild Hackathon",
+    description: "Successfully led and organized BitNBuild, an international hackathon that brought together developers, researchers, and innovators from around the world to build cutting-edge solutions using AI/ML technologies and blockchain integration.",
+    icon: "🚀",
+    color: "from-blue-500/20 to-cyan-500/20"
+  },
 ];
 
 const otherAchievements = [
   "Recognized for contributions to open-source AI projects",
   "Led successful AI workshops for beginners",
   "Mentored junior developers in AI/ML technologies",
-  "Created popular educational content on AI/ML concepts"
+  "Created popular educational content on AI/ML concepts",
+  "Achieved Top 1% ranking in GCCP Cloud Campaign 2024",
+  "Active contributor to research communities and technical forums"
 ];
 
 const Achievements = () => {
@@ -42,8 +50,7 @@ const Achievements = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {achievements.map((achievement, index) => (
-                <AnimatedCard 
-                  key={index}
+                <AnimatedCard
                   className={cn(
                     "p-6 h-full flex flex-col transition-transform duration-300",
                     hoveredCard === index && "scale-[1.03]"

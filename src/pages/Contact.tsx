@@ -9,7 +9,9 @@ import { RESUME_URL, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY
 import { useToast } from '@/hooks/use-toast';
 import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
+// @ts-ignore - EmailJS types not available
 import emailjs from '@emailjs/browser';
+import { ChangeEvent, FormEvent } from 'react';
 
 const socialLinks = [
   {
@@ -67,13 +69,14 @@ const Contact = () => {
     console.log('Public Key:', EMAILJS_PUBLIC_KEY);
     
     // Initialize EmailJS with development options
+    // @ts-ignore - EmailJS types not available
     emailjs.init({
       publicKey: EMAILJS_PUBLIC_KEY,
       blockHeadless: false // Required for development testing
     });
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -81,7 +84,7 @@ const Contact = () => {
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Form validation
@@ -103,6 +106,7 @@ const Contact = () => {
       message: formData.message,
     };
 
+    // @ts-ignore - EmailJS types not available
     emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
@@ -174,7 +178,7 @@ const Contact = () => {
                   className="text-muted-foreground mb-8 text-center"
                   variants={fadeInUp}
                 >
-                  I'm always open to discussing new projects, opportunities, or partnerships. Feel free to reach out through any of the channels below.
+                  I'm always excited to discuss new projects, research collaborations, or opportunities in AI/ML development. With my current roles as Research Associate at EIDS Lab and AI Dev Intern at Vinfinet Technologies, I'm particularly interested in connecting with organizations working on Federated Learning, Explainable AI, Edge AI Optimization, and Healthcare AI Innovation. Feel free to reach out through any of the channels below.
                 </motion.p>
                 
                 <div className="space-y-4">
@@ -206,13 +210,21 @@ const Contact = () => {
                   className="mt-8 text-center"
                   variants={fadeInUp}
                 >
-                  <h4 className="text-lg font-semibold mb-3">Current Availability 📅</h4>
+                  <h4 className="text-lg font-semibold mb-3">Current Focus & Availability 📊</h4>
+                  <p className="text-muted-foreground mb-4">
+                    Currently serving as a Research Associate at EIDS Lab, IIIT SriCity, where I lead research in
+                    <span className="text-primary font-medium"> Federated Learning</span>,
+                    <span className="text-primary font-medium"> Explainable AI</span>, and
+                    <span className="text-primary font-medium"> Edge AI Optimization</span>.
+                    Simultaneously working as an AI Dev Intern at Vinfinet Technologies developing Generative AI multimodal models for sports analysis.
+                  </p>
                   <p className="text-muted-foreground">
-                    I'm currently open to internship opportunities in the AI/ML domain, particularly in 
-                    <span className="text-primary font-medium"> Agentic AI</span>, 
-                    <span className="text-primary font-medium"> GenAI</span>, and 
-                    <span className="text-primary font-medium"> Research Projects</span>. 
-                    Looking for part-time collaborations that allow me to contribute to innovative AI solutions.
+                    I'm currently open to
+                    <span className="text-primary font-medium"> Full-Time opportunities</span> in
+                    <span className="text-primary font-medium"> AI/ML Research</span>,
+                    <span className="text-primary font-medium"> Agentic AI Development</span>, and
+                    <span className="text-primary font-medium"> Healthcare AI Innovation</span>.
+                    Also interested in research collaborations and consulting opportunities in IoT-Enabled Healthcare and Smart Systems.
                   </p>
                 </motion.div>
               </AnimatedCard>

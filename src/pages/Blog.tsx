@@ -26,7 +26,7 @@ const posts: Post[] = [
   {
     id: 10,
     title: "X-FedWCluster: Explainable Federated Learning for Proactive Health Monitoring of Underground Miners via UAV Networks",
-    excerpt: "Accepted in IEEE ICCCNT 2025 conference - A novel federated learning approach for underground miner health monitoring using UAV networks.",
+    excerpt: "Accepted in IEEE ICCCNT 2025 conferencE",
     content: "Research paper accepted in IEEE International Conference on Computer Communication and Networks Technology (ICCCNT) 2025.",
     date: "2025",
     readTime: "15 min",
@@ -38,7 +38,7 @@ const posts: Post[] = [
   {
     id: 11,
     title: "An Explainable AI System for Real-Time Disease Prediction in IoT-Enabled Smart Healthcare",
-    excerpt: "Accepted in ITI 2025 conference - Real-time disease prediction system with explainable AI for smart healthcare applications.",
+    excerpt: "Accepted in ITI 2025 conference",
     content: "Research paper accepted in International Conference on Information Technology and Intelligent Systems (ITI) 2025.",
     date: "2025",
     readTime: "18 min",
@@ -68,7 +68,7 @@ const posts: Post[] = [
     readTime: "10 min",
     category: "Explainable AI",
     tags: ["XAI", "AI Ethics", "Transparency"],
-    type: "publication",
+    type: "blog",
     url: "https://medium.com/epochiiits/unveiling-the-black-box-a-comprehensive-journey-into-explainable-ai-fd0bd017b70c"
   },
   {
@@ -92,7 +92,7 @@ const posts: Post[] = [
     readTime: "12 min",
     category: "Healthcare",
     tags: ["XAI", "Healthcare", "Disease Prediction"],
-    type: "publication",
+    type: "blog",
     url: "https://medium.com/@shreeraj260405/explainable-ai-for-communicable-disease-prediction-a-breakthrough-in-healthcare-technology-662d66efcdb3"
   },
   {

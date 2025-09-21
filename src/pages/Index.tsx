@@ -308,7 +308,7 @@ const Index = () => {
                     
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag) => (
-                        <SkillBadge key={tag} name={tag} className="text-xs py-1 px-2" />
+                        <SkillBadge name={tag} className="text-xs py-1 px-2" />
                       ))}
                     </div>
                     
@@ -418,7 +418,7 @@ const Index = () => {
             className="max-w-xl mx-auto"
           >
             <p className="text-lg mb-8">
-              I'm currently open to Full-Time and Part-Time opportunities and collaborations in AI/ML/DS Development, Agentic AI, and Research Projects. Interested in working together? Let's discuss how we can innovate together.
+              Currently serving as Research Associate at EIDS Lab and AI Dev Intern at Vinfinet Technologies. I'm open to research collaborations, consulting opportunities, and full-time positions in AI/ML research, Agentic AI development, and Healthcare AI innovation. Let's connect to explore how we can advance AI together.
             </p>
             
             <div className="mb-8">

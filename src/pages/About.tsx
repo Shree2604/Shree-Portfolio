@@ -39,9 +39,8 @@ const About = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Auto-rotate carousel images
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: number;
     
     if (autoPlayEnabled) {
       interval = setInterval(() => {
@@ -64,11 +63,15 @@ const About = () => {
     },
     {
       title: "Tools & Frameworks",
-      skills: ["Git", "GitHub", "Matlab", "Linux", "AWS", "Flask", "Django", "Hugging Face", "Streamlit"]
+      skills: ["Git", "GitHub", "Matlab", "Linux", "Amazon Web Services", "Flask", "Django", "Hugging Face", "Streamlit", "MongoDB", "Express.js", "React.js", "Node.js", "Docker", "Google Gemini"]
     },
     {
       title: "Machine Learning & AI",
-      skills: ["TensorFlow", "PyTorch", "Scikit-Learn", "NumPy", "Pandas", "LangChain", "LangGraph"]
+      skills: ["TensorFlow", "PyTorch", "Scikit-Learn", "NumPy", "Pandas", "LangChain", "LangGraph", "LLMs", "Computer Vision", "Natural Language Processing", "MLOps", "Federated Learning", "Explainable AI", "Edge AI Optimization", "UAV Networks"]
+    },
+    {
+      title: "Research Areas",
+      skills: ["IoT-Enabled Healthcare", "Underground Mining Safety", "Smart Healthcare Systems"]
     },
     {
       title: "Relevant Coursework",
@@ -85,38 +88,45 @@ const About = () => {
       icon: "🎓"
     },
     {
+      year: "Sep 2025 – Present",
+      title: "Research Associate",
+      subtitle: "EIDS Lab, IIIT SriCity",
+      details: "Leading research initiatives in Federated Learning and Explainable AI applications for critical systems. Developing Edge AI Optimization techniques for resource-constrained environments and real-time processing. Researching UAV Networks for disaster management, focusing on autonomous coordination and communication protocols.",
+      icon: "🚁"
+    },
+    {
       year: "Jul 2025 – Present",
       title: "AI Dev Intern",
       subtitle: "Vinfinet Technologies Pvt Ltd",
-      details: "Developing Generative AI multimodal models for advanced sports analysis",
+      details: "Developing Generative AI multimodal models for advanced sports analysis. Building Agentic AI pipelines using LangGraph, LangChain, and RAG for intelligent decision-making. Integrating YOLO-based vision systems with natural language understanding for real-time sports insights.",
       icon: "⚡"
     },
     {
       year: "Jan 2025 – Present",
       title: "Freelance AI Developer",
       subtitle: "Innovation Labs & Startups",
-      details: "Delivering proof-of-concept solutions for early-stage startups",
+      details: "Delivering proof-of-concept solutions for early-stage startups. Developing AI-driven prototypes across computer vision, NLP, and multimodal analysis. Collaborating with founders to translate business requirements into technical deliverables.",
       icon: "🚀"
     },
     {
       year: "Nov 2024 – Apr 2025",
       title: "Generative AI / Agentic AI Intern",
       subtitle: "ValueDX, Maharashtra, India",
-      details: "Built AI-driven patient booking system and document processing pipeline",
+      details: "Built AI-driven patient booking system with symptom analysis; improved operational efficiency by 40% via automated triage and scheduling. Developed end-to-end document processing pipeline using Transformer models, RAG architecture, LangChain, and Streamlit to extract and classify invoices, contracts, and purchase orders with 95% accuracy.",
       icon: "🤖"
     },
     {
       year: "Mar 2024 – Jul 2024",
       title: "Machine Learning Intern",
       subtitle: "Civicraft, Varanasi, India",
-      details: "Built local language translation models using TensorFlow & PyTorch",
+      details: "Built local language translation models using TensorFlow and PyTorch to support regional dialects. Integrated multilingual speech capabilities to enable voice-driven interaction across languages. Enhanced accessibility by adapting AI responses to diverse linguistic inputs and formats.",
       icon: "🌐"
     },
     {
       year: "Dec 2023 – Feb 2024",
       title: "ML IoT Research Intern",
       subtitle: "IIIT Sri City, Andhra Pradesh, India",
-      details: "Developed predictive model for infectious disease forecasting (87.4% accuracy)",
+      details: "Developed a smart healthcare monitoring system with IoT sensor integration for real-time vital tracking. Built an ensemble model (Random Forest + XGBoost) achieving 87.4% prediction accuracy for health-related outcomes. Applied explainability techniques (SHAP, LIME, Eli5) to surface model reasoning and increase trust.",
       icon: "🔬"
     }
   ];
@@ -219,13 +229,16 @@ const About = () => {
                 <AnimatedCard className="p-8" glowOnHover>
                   <h3 className="text-2xl font-bold mb-4 text-gradient inline-block">My Journey</h3>
                   <p className="text-muted-foreground mb-6">
-                    I'm a passionate AI/ML developer and researcher currently pursuing B.Tech in Computer Science and Engineering at IIIT Sricity. My journey in tech is focused on building intelligent systems that solve real-world problems.
+                    I'm a passionate AI/ML developer and researcher currently pursuing B.Tech in Computer Science and Engineering at IIIT Sricity. With a CGPA of 8.29/10, I've built a strong foundation in computer science while actively contributing to cutting-edge research and development in artificial intelligence.
                   </p>
                   <p className="text-muted-foreground mb-6">
-                    Through my academic and professional experiences, I've developed expertise in machine learning, deep learning, and AI applications across various domains including healthcare and finance.
+                    As a Research Associate at EIDS Lab, I lead initiatives in Federated Learning and Explainable AI for critical systems, while simultaneously working as an AI Dev Intern at Vinfinet Technologies developing Generative AI multimodal models for sports analysis. My expertise spans across multiple domains including healthcare automation, edge AI optimization, and UAV networks for disaster management.
+                  </p>
+                  <p className="text-muted-foreground mb-6">
+                    Through my professional journey, I've developed expertise in machine learning, deep learning, and AI applications across various domains. I've successfully built AI-driven systems with proven impact - from achieving 87.4% accuracy in infectious disease forecasting to improving operational efficiency by 40% in healthcare systems and boosting data throughput by 85% in document processing pipelines.
                   </p>
                   <p className="text-muted-foreground">
-                    I'm particularly interested in working with cutting-edge technologies like LangGraph for autonomous AI systems and advancing healthcare automation through intelligent solutions.
+                    I'm particularly passionate about working with cutting-edge technologies like LangGraph for autonomous AI systems, advancing healthcare automation through intelligent solutions, and contributing to research in IoT-enabled healthcare and underground mining safety. My goal is to create AI systems that are not only technically advanced but also accessible and beneficial to everyone.
                   </p>
                 </AnimatedCard>
               </motion.div>
@@ -253,7 +266,7 @@ const About = () => {
                         <h4 className="text-xl font-semibold mb-4">{group.title}</h4>
                         <div className="flex flex-wrap gap-2">
                           {group.skills.map((skill) => (
-                            <SkillBadge key={skill} name={skill} />
+                            <SkillBadge name={skill} />
                           ))}
                         </div>
                       </AnimatedCard>
