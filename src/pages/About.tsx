@@ -25,6 +25,7 @@ const About = () => {
     "/images/DSC_6794.JPG",
     "/images/DSC_0540.JPG",
     "/images/HI.JPG",
+    "/images/DSC_0452.JPG"
   ];
 
   useEffect(() => {
