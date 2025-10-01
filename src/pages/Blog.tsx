@@ -26,7 +26,7 @@ const posts: Post[] = [
   {
     id: 10,
     title: "X-FedWCluster: Explainable Federated Learning for Proactive Health Monitoring of Underground Miners via UAV Networks",
-    excerpt: "Accepted in IEEE ICCCNT 2025 conferencE",
+    excerpt: "Accepted in IEEE ICCCNT 2025 Conference",
     content: "Research paper accepted in IEEE International Conference on Computer Communication and Networks Technology (ICCCNT) 2025.",
     date: "2025",
     readTime: "15 min",
@@ -38,7 +38,7 @@ const posts: Post[] = [
   {
     id: 11,
     title: "An Explainable AI System for Real-Time Disease Prediction in IoT-Enabled Smart Healthcare",
-    excerpt: "Accepted in ITI 2025 conference",
+    excerpt: "Accepted in ITI 2025 Conference",
     content: "Research paper accepted in International Conference on Information Technology and Intelligent Systems (ITI) 2025.",
     date: "2025",
     readTime: "18 min",
@@ -82,78 +82,6 @@ const posts: Post[] = [
     tags: ["Python", "OpenCV", "Graphics"],
     type: "blog",
     url: "https://medium.com/epochiiits/creating-artistic-outlines-combining-python-opencv-and-turtle-graphics-178a1faab856"
-  },
-  {
-    id: 4,
-    title: "Explainable AI for Communicable Disease Prediction",
-    excerpt: "A breakthrough approach using explainable AI for healthcare predictions.",
-    content: "Full article available on Medium",
-    date: "December 8, 2023",
-    readTime: "12 min",
-    category: "Healthcare",
-    tags: ["XAI", "Healthcare", "Disease Prediction"],
-    type: "blog",
-    url: "https://medium.com/@shreeraj260405/explainable-ai-for-communicable-disease-prediction-a-breakthrough-in-healthcare-technology-662d66efcdb3"
-  },
-  {
-    id: 5,
-    title: "Why Explainable AI Matters?: Bringing Transparency to Machine Learning",
-    excerpt: "Understanding the importance of transparency in AI systems and decision-making.",
-    content: "Full article available on Medium",
-    date: "June 20, 2023",
-    readTime: "7 min",
-    category: "Explainable AI",
-    tags: ["XAI", "Transparency", "Ethics"],
-    type: "blog",
-    url: "https://medium.com/@shreeraj260405/why-explainable-ai-matters-bringing-transparency-to-machine-learning-cbe1d9113746"
-  },
-  {
-    id: 6,
-    title: "Unveiling the Spectrum of Explainable AI: A Deep Dive into XAI Techniques",
-    excerpt: "Exploring the range of techniques available for explaining AI models.",
-    content: "Full article available on Medium",
-    date: "July 5, 2023",
-    readTime: "9 min",
-    category: "Explainable AI",
-    tags: ["XAI", "Techniques", "AI Models"],
-    type: "blog",
-    url: "https://medium.com/@shreeraj260405/unveiling-the-spectrum-of-explainable-ai-a-deep-dive-into-xai-techniques-1ccfa856ac96"
-  },
-  {
-    id: 7,
-    title: "LIME Unveiled: A Deep Dive into Explaining AI Models",
-    excerpt: "Detailed analysis of LIME for explaining text, image, and tabular data models.",
-    content: "Full article available on Medium",
-    date: "August 12, 2023",
-    readTime: "10 min",
-    category: "Explainable AI",
-    tags: ["LIME", "XAI", "Model Interpretation"],
-    type: "blog",
-    url: "https://medium.com/@shreeraj260405/lime-unveiled-a-deep-dive-into-explaining-ai-models-for-text-images-and-tabular-data-046c7c3b4e9f"
-  },
-  {
-    id: 8,
-    title: "Hands-On LIME: Practical Implementation for Image, Text, and Tabular Data",
-    excerpt: "Step-by-step practical guide to implementing LIME across different data types.",
-    content: "Full article available on Medium",
-    date: "September 18, 2023",
-    readTime: "11 min",
-    category: "Explainable AI",
-    tags: ["LIME", "Implementation", "Tutorial"],
-    type: "blog",
-    url: "https://medium.com/@shreeraj260405/hands-on-lime-practical-implementation-for-image-text-and-tabular-data-95566da87f57"
-  },
-  {
-    id: 9,
-    title: "SHAP Unveiled: A Deep Dive into Explaining AI Models for Machine Learning",
-    excerpt: "Comprehensive analysis of SHAP methods for model interpretation.",
-    content: "Full article available on Medium",
-    date: "October 30, 2023",
-    readTime: "10 min",
-    category: "Explainable AI",
-    tags: ["SHAP", "XAI", "Model Interpretation"],
-    type: "blog",
-    url: "https://medium.com/@shreeraj260405/shap-unveiled-a-deep-dive-into-explaining-ai-models-for-machine-learning-b48ae012e982"
   }
 ];
 
