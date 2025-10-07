@@ -13,21 +13,27 @@ import SkillBadge from '@/components/SkillBadge';
 import { Card, CardContent } from '@/components/ui/card';
 
 // Featured projects data
+// Featured projects data
 const featuredProjects = [
   {
-    title: "GIF Animation Generator Agent",
-    description: "AI-powered GIF generation workflow with multiple autonomous agents.",
-    tags: ["LangGraph", "Google Gemini", "Stable Diffusion"],
-    github: "https://github.com/Shree2604/GIF-Animation-Generator-Agent",
-    // image removed
+    title: "AI-Powered Interview Automation Platform",
+    description: "Engineered an AI-driven interview automation system leveraging FastAPI and React, enabling intelligent candidate evaluation, real-time voice interactions, and secure role-based access via JWT.",
+    tags: ["FastAPI", "PostgreSQL", "WebSockets", "React", "JWT"],
+    github: "https://github.com/Shree2604/Interview_automation",
+    liveUrl: "https://www.futuregenautomation.com/"
   },
   {
-    title: "Lyric Loom",
-    description: "Full-stack music platform with B2C interface and B2B partner API integration.",
-    tags: ["React", "Node.js", "MongoDB"],
-    github: "https://github.com/Shree2604/lyric-loom",
-    liveUrl: "https://lyric-loom-fveq.vercel.app/",
-    // image removed
+    title: "AgenticAds – AI-Powered Ad Generation Platform",
+    description: "Developed a multimodal advertising platform integrating Agentic AI and RAG pipelines for generating context-aware text, image, and video ads tailored to Instagram, LinkedIn, Twitter, and YouTube.",
+    tags: ["React", "FastAPI", "Python", "MongoDB", "JWT"],
+    github: "https://github.com/Shree2604/Agentic-Ads"
+  },
+  {
+    title: "Lyric Loom - A Music Streaming Website",
+    description: "Developed a full-stack music platform with B2C interface, B2B partner API integration, JWT authentication, and song management.",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Redux", "Docker"],
+    github: "https://github.com/Shree2604/Lyric-Loom",
+    liveUrl: "https://lyric-loom-fveq.vercel.app/"
   }
 ];
 
