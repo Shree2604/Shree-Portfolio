@@ -298,7 +298,7 @@ const Index = () => {
       {/* Featured Projects Section */}
       <Section title="Featured Projects" subtitle="Selected works from my portfolio" className="bg-gradient-to-b from-background/95 to-secondary/5">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {featuredProjects.map((project, index) => (
               <motion.div
                 key={index}
