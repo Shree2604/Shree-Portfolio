@@ -23,7 +23,7 @@ const personalProjects = [
   },
   {
     id: 2,
-    title: "Intelligent Healthcare",
+    title: "Intelligent Smart Transparent Healthcare System",
     description: "Smart healthcare ecosystem for real-time monitoring. Built a stacked model (Logistic Regression, Random Forest, XGBoost) with 87.4% accuracy and used Eli5, DeepSHAP, LIME for model explainability.",
     technologies: ["Explainable AI", "Logistic Regression", "Random Forest", "XGBoost"],
     githubUrl: "https://github.com/Shree2604/ML-Internship-Task",
@@ -49,19 +49,6 @@ const personalProjects = [
   },
   {
     id: 4,
-    title: "Lyric Loom",
-    description: "Full-stack music platform with B2C user interface and B2B partner API integration. Features include JWT authentication, song management, and artist dashboards.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Docker"],
-    githubUrl: "https://github.com/Shree2604/lyric-loom",
-    liveUrl: "https://lyric-loom-fveq.vercel.app/",
-    details: "Lyric Loom is a comprehensive music platform that connects artists, listeners, and industry partners. The project features a sophisticated authentication system, advanced search and recommendation algorithms, and a streamlined user experience for both content creators and consumers.",
-    category: "Web Development",
-    role: "Full Stack Developer",
-    problem: "Emerging musicians struggle to manage and distribute their music while connecting with potential listeners and industry partners.",
-    impact: "Platform has helped over 500 emerging artists increase their visibility by an average of 65% and streamlined music distribution."
-  },
-  {
-    id: 5,
     title: "AI-Powered Interview Automation Platform",
     description: "Engineered an AI-driven interview automation system leveraging FastAPI and React, enabling intelligent candidate evaluation, real-time voice interactions, and secure role-based access via JWT. Optimized PostgreSQL with SQLAlchemy ORM and caching strategies, improving query performance by up to 40\% for faster analytics and response generation.",
     technologies: ["FastAPI", "PostgreSQL", "WebSockets", "React", "JWT"],
@@ -74,7 +61,7 @@ const personalProjects = [
     impact: "Streamlined interview automation with improved performance and analytics."
   },
   {
-    id: 6,
+    id: 5,
     title: "AgenticAds – AI-Powered Ad Generation Platform",
     description: "Developed a multimodal advertising platform integrating Agentic AI and RAG pipelines for generating context-aware text, image, and video ads tailored to Instagram, LinkedIn, Twitter, and YouTube. Built a scalable FastAPI backend with JWT authentication and asynchronous MongoDB operations, integrated with a modular React frontend featuring real-time AI-driven analytics and insights.",
     technologies: ["React", "FastAPI", "Python", "MongoDB", "JWT"],
@@ -87,7 +74,7 @@ const personalProjects = [
     impact: "Automated ad generation with platform-specific optimization and real-time insights."
   },
   {
-    id: 7,
+    id: 6,
     title: "Lyric Loom - A Music Streaming Website",
     description: "Developed a full-stack music platform with B2C interface, B2B partner API integration, JWT authentication, and song management. Implemented RESTful APIs with Express and MongoDB, Redis caching for performance, dashboards with analytics, and deployed via Docker Compose.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Docker"],
