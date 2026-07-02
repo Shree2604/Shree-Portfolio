@@ -219,7 +219,7 @@ const Index = () => {
                   transition={{ delay: 1.5, duration: 0.7 }}
                 >
                   <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 text-muted-foreground font-orbitron" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-                    Agentic, Edge & Transparent Healthcare AI Researcher
+                    Agentic, Transparent Healthcare AI Researcher
                   </h2>
                 </motion.div>
                 
