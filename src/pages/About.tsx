@@ -102,28 +102,7 @@ const About = () => {
                 <p className="text-lg text-muted-foreground mb-4">
                   AI/ML Engineer | RLHF, Agentic AI & Healthcare AI
                 </p>
-                <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-2 mb-4">
-                  <a 
-                    href="tel:+918143272388" 
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    +91 8143272388
-                  </a>
-                  <span className="text-muted-foreground hidden sm:inline">|</span>
-                  <a
-                    href="mailto:shreeraj.m22@iiits.in"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    shreeraj.m22@iiits.in
-                  </a>
-                  <span className="text-muted-foreground hidden sm:inline">|</span>
-                  <a 
-                    href="mailto:shree.xai.dev@gmail.com" 
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    shree.xai.dev@gmail.com
-                  </a>
-                </div>
+                
                 <div className="mt-4">
                   <a 
                     href={RESUME_URL} 
