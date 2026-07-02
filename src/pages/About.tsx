@@ -21,6 +21,7 @@ const About = () => {
     "/images/DSC_6794.JPG",
     "/images/DSC_0540.JPG",
     "/images/HI.JPG",
+    "/images/Shree.png",
     "/images/DSC_0452.JPG",
     "/images/DSC_0454.JPG",
     "/images/DSC_6055.JPG"
