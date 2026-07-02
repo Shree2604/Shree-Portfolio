@@ -30,12 +30,6 @@ const featuredProjects = [
     liveUrl: null
   },
   {
-    title: "AgenticAds – AI-Powered Ad Generation Platform",
-    description: "Developed a multimodal advertising platform using LLMs, RAG, prompt templates, guardrails, FastAPI, MongoDB, and JWT-secured campaign workflows.",
-    tags: ["FastAPI", "MongoDB", "LLM/RAG", "Prompt Engineering", "JWT"],
-    github: "https://github.com/Shree2604/Agentic-Ads"
-  },
-  {
     title: "Lyric Loom - A Music Streaming Website",
     description: "Developed a full-stack music platform with B2C interface, B2B partner API integration, JWT authentication, and song management.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Redux", "Docker"],
