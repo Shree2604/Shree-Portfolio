@@ -54,7 +54,7 @@ export default function Navbar() {
               to="/" 
               className="text-xl font-bold cyber-gradient-text"
             >
-              ShreeRaj.Dev
+              Shree.Dev
             </Link>
 
             {/* Desktop Navigation */}
