@@ -50,33 +50,59 @@ const personalProjects = [
   {
     id: 4,
     title: "AI-Powered Interview Automation Platform",
-    description: "Engineered an AI-driven interview automation system leveraging FastAPI and React, enabling intelligent candidate evaluation, real-time voice interactions, and secure role-based access via JWT. Optimized PostgreSQL with SQLAlchemy ORM and caching strategies, improving query performance by up to 40\% for faster analytics and response generation.",
-    technologies: ["FastAPI", "PostgreSQL", "WebSockets", "React", "JWT"],
+    description: "Developed a 0 to 1 production-ready backend with FastAPI, WebSockets, JWT authentication, role-based access control, PostgreSQL, SQLAlchemy ORM, and Redis caching for real-time AI-powered voice interviews.",
+    technologies: ["FastAPI", "PostgreSQL", "WebSockets", "SQLAlchemy", "Redis", "JWT"],
     githubUrl: "https://github.com/Shree2604/Interview_automation",
     liveUrl: "https://www.futuregenautomation.com/",
-    details: "This platform enables intelligent candidate evaluation through real-time voice interactions and secure role-based access. It features advanced analytics and response generation with optimized database performance.",
+    details: "This platform enables intelligent candidate evaluation through real-time voice interactions and secure role-based access. It features advanced analytics, optimized database performance, and prompt engineering strategies for LLM-backed interview flows.",
     category: "AI/ML",
     role: "Lead Developer",
     problem: "Traditional interview processes lack automation and intelligent evaluation capabilities.",
-    impact: "Streamlined interview automation with improved performance and analytics."
+    impact: "Improved analytics API response times by 45 percent through PostgreSQL, SQLAlchemy, Redis caching, and LLM prompt optimization."
+  },
+  {
+    id: 7,
+    title: "AgentEdge - AI Agent Marketplace",
+    description: "Developed an AI agent marketplace enabling businesses to discover, purchase, and deploy intelligent AI agents for enterprise workflow automation and digital transformation.",
+    technologies: ["AI Agents", "Enterprise AI", "Full Stack", "Workflow Automation", "Marketplace"],
+    githubUrl: null,
+    liveUrl: null,
+    details: "AgentEdge simplifies enterprise AI adoption by packaging intelligent agents into a discoverable marketplace experience with deployment-focused workflows.",
+    category: "Agentic AI",
+    role: "Machine Learning Engineering Intern",
+    problem: "Businesses need a practical way to evaluate and deploy AI agents without rebuilding complex workflows from scratch.",
+    impact: "Created marketplace infrastructure that makes intelligent agents easier to discover, purchase, and deploy for enterprise clients."
+  },
+  {
+    id: 8,
+    title: "Badminton Match Analysis AI System",
+    description: "Built an end-to-end Generative AI and Computer Vision system that converts badminton match videos into automated summaries, highlights, and question-answer insights.",
+    technologies: ["Python", "Computer Vision", "YOLO", "RAG", "Phi-3", "Generative AI"],
+    githubUrl: null,
+    liveUrl: null,
+    details: "The system combines YOLO-based player detection, shuttlecock tracking, local Phi-3 inference, and an agentic RAG pipeline for sports video understanding.",
+    category: "Computer Vision",
+    role: "AI/ML Development Intern",
+    problem: "Raw match footage is time-consuming to analyze manually and difficult to convert into structured tactical insights.",
+    impact: "Automated rally and highlight detection with about 75 percent IoU and enabled match summaries, highlights, and natural-language Q&A over video content."
   },
   {
     id: 5,
     title: "AgenticAds – AI-Powered Ad Generation Platform",
-    description: "Developed a multimodal advertising platform integrating Agentic AI and RAG pipelines for generating context-aware text, image, and video ads tailored to Instagram, LinkedIn, Twitter, and YouTube. Built a scalable FastAPI backend with JWT authentication and asynchronous MongoDB operations, integrated with a modular React frontend featuring real-time AI-driven analytics and insights.",
-    technologies: ["React", "FastAPI", "Python", "MongoDB", "JWT"],
+    description: "Built a prototype AI application with a FastAPI backend leveraging LLMs, RAG, prompt templates, guardrails, JWT authentication, and asynchronous MongoDB operations for multimodal ad generation.",
+    technologies: ["Python", "FastAPI", "MongoDB", "LLM/RAG", "Prompt Engineering", "JWT"],
     githubUrl: "https://github.com/Shree2604/Agentic-Ads",
     liveUrl: null,
-    details: "This platform uses Agentic AI and RAG to generate tailored ads for multiple social media platforms. It features real-time analytics and a modular architecture for scalability.",
+    details: "This platform uses LLMs and RAG to generate context-aware ad content across social media platforms, with MongoDB schemas for user data and ad campaigns plus validation guardrails for reliable AI output.",
     category: "AI/ML",
     role: "Lead Developer",
     problem: "Creating effective ads across multiple platforms requires significant time and expertise.",
-    impact: "Automated ad generation with platform-specific optimization and real-time insights."
+    impact: "Automated ad generation with prompt-template guardrails, secure campaign workflows, and scalable asynchronous backend operations."
   },
   {
     id: 6,
     title: "Lyric Loom - A Music Streaming Website",
-    description: "Developed a full-stack music platform with B2C interface, B2B partner API integration, JWT authentication, and song management. Implemented RESTful APIs with Express and MongoDB, Redis caching for performance, dashboards with analytics, and deployed via Docker Compose.",
+    description: "Architected backend REST APIs using Node.js and Express.js for music streaming, authentication, B2B partner integration, song management, MongoDB schemas, Redis caching, and Docker deployment.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Redux", "Docker"],
     githubUrl: "https://github.com/Shree2604/Lyric-Loom",
     liveUrl: "https://lyric-loom-fveq.vercel.app/",
@@ -84,7 +110,7 @@ const personalProjects = [
     category: "Web Development",
     role: "Full Stack Developer",
     problem: "Emerging musicians need platforms to manage and distribute their music effectively.",
-    impact: "Helped over 500 artists increase visibility and streamlined music distribution."
+    impact: "Reduced database load by 60 percent with Redis caching while supporting streaming, playlist, authentication, and partner integration workflows."
   }
 
 ];
@@ -127,6 +153,10 @@ const Projects = () => {
                 technologies={project.technologies}
                 liveUrl={project.liveUrl}
                 githubUrl={project.githubUrl}
+                role={project.role}
+                category={project.category}
+                problem={project.problem}
+                impact={project.impact}
                 index={index}
               />
             ))}

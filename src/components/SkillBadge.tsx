@@ -17,22 +17,33 @@ export default function SkillBadge({ name, className, level }: SkillBadgeProps) 
   const getSkillInfo = () => {
     const lowerName = name.toLowerCase();
     
-    if (['python', 'c++', 'java', 'sql'].includes(lowerName)) {
+    if (['python', 'javascript', 'node.js', 'c++', 'java', 'sql'].includes(lowerName)) {
       return {
         color: 'from-blue-500/30 to-cyan-500/30 border-blue-500/30'
       };
     }
-    if (['tensorflow', 'pytorch', 'langchain', 'langgraph', 'machine learning', 'deep learning', 'ml models', 'xgboost'].includes(lowerName)) {
+    if ([
+      'tensorflow', 'pytorch', 'langchain', 'langgraph', 'machine learning',
+      'deep learning', 'ml models', 'xgboost', 'reinforcement learning',
+      'rlhf', 'grpo', 'ppo', 'llm operations', 'prompt engineering',
+      'rag systems', 'vector databases', 'transformers', 'nemo gym', 'trl',
+      'hud.ai', 'federated learning', 'explainable ai', 'edge ai optimization'
+    ].includes(lowerName)) {
       return {
         color: 'from-purple-500/30 to-pink-500/30 border-purple-500/30'
       };
     }
-    if (['git', 'github', 'aws', 'flask', 'django', 'hugging face', 'streamlit'].includes(lowerName)) {
+    if ([
+      'git', 'github', 'aws', 'amazon web services', 'flask', 'django',
+      'hugging face', 'streamlit', 'fastapi', 'express.js', 'react.js',
+      'sqlalchemy', 'redis', 'docker', 'ci/cd', 'restful apis',
+      'websockets', 'jwt'
+    ].includes(lowerName)) {
       return {
         color: 'from-orange-500/30 to-amber-500/30 border-orange-500/30'
       };
     }
-    if (['google gemini', 'llms', 'natural language processing', 'computer vision'].includes(lowerName)) {
+    if (['google gemini', 'llms', 'natural language processing', 'computer vision', 'mongodb', 'postgresql', 'mysql'].includes(lowerName)) {
       return {
         color: 'from-blue-600/30 to-violet-500/30 border-blue-600/30'
       };

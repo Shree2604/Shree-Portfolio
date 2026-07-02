@@ -30,6 +30,13 @@ const socialLinks = [
   },
   {
     icon: <Mail className="h-5 w-5" />,
+    label: 'IIIT Email',
+    value: 'shreeraj.m22@iiits.in',
+    href: 'mailto:shreeraj.m22@iiits.in',
+    color: 'bg-red-600'
+  },
+  {
+    icon: <Mail className="h-5 w-5" />,
     label: 'Email',
     value: 'shree.xai.dev@gmail.com',
     href: 'mailto:shree.xai.dev@gmail.com',
@@ -226,30 +233,30 @@ const Contact = () => {
                 </motion.h3>
                 <motion.div className="space-y-4 flex-grow flex flex-col justify-center" variants={fadeInUp}>
                   <div className="text-center flex-grow flex flex-col justify-center">
-                    <h4 className="text-sm font-semibold mb-2 text-primary">Research Associate</h4>
+                    <h4 className="text-sm font-semibold mb-2 text-primary">Special Projects Lead</h4>
                     <p className="text-muted-foreground text-xs mb-3">
-                      EIDS Lab, IIIT SriCity - Leading research in
-                      <span className="text-primary font-medium"> Federated Learning</span>,
-                      <span className="text-primary font-medium"> Explainable AI</span>, and
-                      <span className="text-primary font-medium"> Edge AI Optimization</span>.
+                      BioStack Platforms - Building the data layer for
+                      <span className="text-primary font-medium"> AI-native healthcare</span>,
+                      <span className="text-primary font-medium"> drug discovery</span>, and
+                      <span className="text-primary font-medium"> medical AI post-training</span>.
                     </p>
                   </div>
 
                   <div className="text-center flex-grow flex flex-col justify-center">
-                    <h4 className="text-sm font-semibold mb-2 text-primary">AI Dev Intern</h4>
+                    <h4 className="text-sm font-semibold mb-2 text-primary">Recent MLE Work</h4>
                     <p className="text-muted-foreground text-xs mb-3">
-                      Vinfinet Technologies - Developing Generative AI multimodal models for sports analysis and performance optimization.
+                      AutomationEdge - Architected production-grade RL environments and built AgentEdge for enterprise AI agent deployment.
                     </p>
                   </div>
 
                   <div className="text-center flex-grow flex flex-col justify-center">
                     <h4 className="text-sm font-semibold mb-2 text-primary">Open to Opportunities</h4>
                     <p className="text-muted-foreground text-xs">
-                      Currently seeking
-                      <span className="text-primary font-medium"> Full-Time positions</span> in
-                      <span className="text-primary font-medium"> AI/ML Research</span>,
-                      <span className="text-primary font-medium"> Agentic AI Development</span>, and
-                      <span className="text-primary font-medium"> Healthcare AI Innovation</span>.
+                      Open to
+                      <span className="text-primary font-medium"> AI/ML engineering</span>,
+                      <span className="text-primary font-medium"> RLHF systems</span>,
+                      <span className="text-primary font-medium"> Agentic AI</span>, and
+                      <span className="text-primary font-medium"> Healthcare AI innovation</span>.
                     </p>
                   </div>
                 </motion.div>

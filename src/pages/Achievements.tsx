@@ -7,6 +7,12 @@ import { cn } from '@/lib/utils';
 
 const achievements = [
   {
+    title: "Architected 6 Production RL Environments",
+    description: "Built reinforcement learning environments across X-ray analysis, ADMET drug discovery, T1D insulin dosing, ECG analysis, and breast cancer longitudinal patient data using NeMo Gym, TRL, hud.ai, GRPO, and PPO.",
+    icon: "RL",
+    color: "from-indigo-500/20 to-sky-500/20"
+  },
+  {
     title: "Published 3 Quality Research Papers",
     description: "Published research papers in IEEE ICCCNT 2025, ITI 2025 conferences, and contributed to Springer book chapter on Industry 5.0 data analytics covering Federated Learning, AI/ML, and Explainable AI.",
     icon: "📚",
@@ -27,6 +33,10 @@ const achievements = [
 ];
 
 const otherAchievements = [
+  "Joined BioStack Platforms founding team as Special Projects Lead",
+  "Developed AgentEdge, an AI agent marketplace for enterprise workflows",
+  "Led 25+ Epoch AI/ML Club members across 10+ workshops and hackathons with 500+ participants",
+  "Achieved 150 percent of Abhisarga sponsorship funding target",
   "Recognized for contributions to open-source AI projects",
   "Led successful AI workshops for beginners",
   "Mentored junior developers in AI/ML technologies",
@@ -48,7 +58,7 @@ const Achievements = () => {
               Major Achievements
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
                 <AnimatedCard
                   className={cn(

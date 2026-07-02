@@ -17,15 +17,22 @@ import { Card, CardContent } from '@/components/ui/card';
 const featuredProjects = [
   {
     title: "AI-Powered Interview Automation Platform",
-    description: "Engineered an AI-driven interview automation system leveraging FastAPI and React, enabling intelligent candidate evaluation, real-time voice interactions, and secure role-based access via JWT.",
-    tags: ["FastAPI", "PostgreSQL", "WebSockets", "React", "JWT"],
+    description: "Built a production-ready FastAPI backend for real-time AI-powered voice interviews, with PostgreSQL, SQLAlchemy, Redis caching, JWT authentication, and role-based access control.",
+    tags: ["FastAPI", "PostgreSQL", "WebSockets", "SQLAlchemy", "Redis"],
     github: "https://github.com/Shree2604/Interview_automation",
     liveUrl: "https://www.futuregenautomation.com/"
   },
   {
+    title: "AgentEdge - AI Agent Marketplace",
+    description: "Architected a full-stack marketplace for discovering, purchasing, and deploying intelligent AI agents that simplify enterprise workflows and accelerate digital transformation.",
+    tags: ["AI Agents", "Enterprise AI", "Full Stack", "Workflow Automation", "Marketplace"],
+    github: null,
+    liveUrl: null
+  },
+  {
     title: "AgenticAds – AI-Powered Ad Generation Platform",
-    description: "Developed a multimodal advertising platform integrating Agentic AI and RAG pipelines for generating context-aware text, image, and video ads tailored to Instagram, LinkedIn, Twitter, and YouTube.",
-    tags: ["React", "FastAPI", "Python", "MongoDB", "JWT"],
+    description: "Developed a multimodal advertising platform using LLMs, RAG, prompt templates, guardrails, FastAPI, MongoDB, and JWT-secured campaign workflows.",
+    tags: ["FastAPI", "MongoDB", "LLM/RAG", "Prompt Engineering", "JWT"],
     github: "https://github.com/Shree2604/Agentic-Ads"
   },
   {
@@ -57,17 +64,23 @@ const featuredPosts = [
 // Skills
 const skills = [
   // Programming Languages
-  "Python", "C++", "Java", "SQL",
+  "Python", "JavaScript", "Node.js", "Java", "C++", "SQL",
+
+  // AI/ML and LLM systems
+  "Reinforcement Learning", "RLHF", "GRPO", "PPO", "LLM Operations",
+  "Prompt Engineering", "RAG Systems", "Vector Databases", "Transformers",
+  "LangChain", "LangGraph", "LLMs", "Computer Vision", "Natural Language Processing",
+  "MLOps", "Federated Learning", "Explainable AI", "Edge AI Optimization",
+
+  // RL/ML Frameworks
+  "NeMo Gym", "TRL", "hud.ai", "PyTorch", "TensorFlow", "Scikit-Learn",
+  "NumPy", "Pandas",
 
   // Tools & Frameworks
-  "Git", "GitHub", "Matlab", "Linux", "Amazon Web Services", "Flask", "Django",
-  "Hugging Face", "Streamlit", "MongoDB", "Express.js", "React.js", "Node.js",
-  "Docker", "Google Gemini",
-
-  // Machine Learning & AI
-  "TensorFlow", "PyTorch", "Scikit-Learn", "NumPy", "Pandas", "LangChain",
-  "LangGraph", "LLMs", "Computer Vision", "Natural Language Processing", "MLOps",
-  "Federated Learning", "Explainable AI", "Edge AI Optimization", "UAV Networks",
+  "FastAPI", "Flask", "Django", "Express.js", "React.js", "SQLAlchemy",
+  "Redis", "MongoDB", "PostgreSQL", "MySQL", "Docker", "AWS", "CI/CD",
+  "RESTful APIs", "WebSockets", "JWT", "Git", "GitHub", "Matlab", "Linux",
+  "Hugging Face", "Streamlit", "Google Gemini", "UAV Networks",
 
   // Research Areas
   "IoT-Enabled Healthcare", "Underground Mining Safety", "Smart Healthcare Systems",
@@ -206,7 +219,7 @@ const Index = () => {
                   transition={{ delay: 1.5, duration: 0.7 }}
                 >
                   <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 text-muted-foreground font-orbitron" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-                    Agentic , Edge & Transparent AI Researcher 
+                    Agentic, Edge & Transparent Healthcare AI Researcher
                   </h2>
                 </motion.div>
                 
@@ -217,7 +230,7 @@ const Index = () => {
                   className="w-full max-w-xl mx-auto"
                 >
                   <div className="text-primary text-lg md:text-xl lg:text-2xl mb-8" style={{ textShadow: '0 0 8px rgba(14, 165, 233, 0.5)' }}>
-                   Making AI Accessible to Everyone
+                   Making Healthcare AI Accessible to Everyone
                   </div>
                 </motion.div>
               </div>
@@ -424,7 +437,7 @@ const Index = () => {
             className="max-w-xl mx-auto"
           >
             <p className="text-lg mb-8">
-              Currently serving as Research Associate at EIDS Lab and AI Dev Intern at Vinfinet Technologies. I'm open to research collaborations, consulting opportunities, and full-time positions in AI/ML research, Agentic AI development, and Healthcare AI innovation. Let's connect to explore how we can advance AI together.
+              Currently serving as Special Projects Lead at BioStack Platforms after building production-grade RL environments and AI agent marketplace infrastructure at AutomationEdge. I'm open to research collaborations, consulting opportunities, and full-time roles across AI/ML engineering, RLHF systems, Agentic AI, and Healthcare AI innovation.
             </p>
             
             <div className="mb-8">

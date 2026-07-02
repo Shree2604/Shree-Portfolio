@@ -19,6 +19,10 @@ interface ProjectCardProps {
   technologies: string[];
   liveUrl?: string | null;
   githubUrl?: string | null;
+  role?: string;
+  category?: string;
+  problem?: string;
+  impact?: string;
   index: number;
 }
 
@@ -28,6 +32,10 @@ export default function ProjectCard({
   technologies,
   liveUrl,
   githubUrl,
+  role = "Lead Developer",
+  category = "AI/ML",
+  problem = "This project solves a practical AI/ML or software engineering challenge using a focused technical approach.",
+  impact = "Delivered a usable solution with measurable improvements in workflow, accessibility, or system performance.",
   index
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
@@ -88,23 +96,23 @@ export default function ProjectCard({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <h4 className="font-medium mb-1 text-sm">Role</h4>
-                    <p className="text-sm text-muted-foreground">Lead Developer</p>
+                    <p className="text-sm text-muted-foreground">{role}</p>
                   </div>
                   
                   <div>
                     <h4 className="font-medium mb-1 text-sm">Category</h4>
-                    <p className="text-sm text-muted-foreground">AI/ML</p>
+                    <p className="text-sm text-muted-foreground">{category}</p>
                   </div>
                 </div>
                 
                 <div>
                   <h4 className="font-medium mb-1 text-sm">Problem & Approach</h4>
-                  <p className="text-sm text-muted-foreground">Creating animated GIFs traditionally requires specialized design skills and is time-consuming. This project automates the entire process from text descriptions.</p>
+                  <p className="text-sm text-muted-foreground">{problem}</p>
                 </div>
                 
                 <div>
                   <h4 className="font-medium mb-1 text-sm">Impact</h4>
-                  <p className="text-sm text-muted-foreground">Reduced GIF creation time by 85% and enabled non-designers to create custom animations with simple text prompts.</p>
+                  <p className="text-sm text-muted-foreground">{impact}</p>
                 </div>
                 
                 <div>

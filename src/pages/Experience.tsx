@@ -6,6 +6,32 @@ import { cn } from '@/lib/utils';
 
 const experiences = [
   {
+    title: "Special Projects Lead (SPL)",
+    company: "BioStack Platforms",
+    location: "San Francisco, CA, USA - Remote",
+    period: "Jul 2026 - Present",
+    description: [
+      "Joined BioStack's founding team to build the data layer for AI-native healthcare and drug discovery.",
+      "Contributing to post-training infrastructure and RL environment design for medical AI systems.",
+      "Working across healthcare data workflows, AI system design, and applied research translation."
+    ],
+    icon: "AI",
+    color: "from-indigo-500/20 to-sky-500/20"
+  },
+  {
+    title: "Machine Learning Engineering Intern",
+    company: "AutomationEdge",
+    location: "Pune, Maharashtra, India - Hybrid",
+    period: "Jan 2026 - Jun 2026",
+    description: [
+      "Architected six production-grade reinforcement learning environments across X-ray analysis, ADMET drug discovery, insulin dosing for T1D, ECG analysis, and breast cancer longitudinal patient data.",
+      "Trained RLHF pipelines with GRPO and PPO on real-world biomedical data using NeMo Gym, TRL, and hud.ai.",
+      "Developed AgentEdge, an AI agent marketplace for discovering, purchasing, and deploying intelligent AI agents for enterprise workflows."
+    ],
+    icon: "RL",
+    color: "from-violet-500/20 to-fuchsia-500/20"
+  },
+  {
     title: "Research Associate",
     company: "EIDS Lab, IIIT SriCity",
     location: "Andhra Pradesh, India · Onsite",
@@ -20,15 +46,15 @@ const experiences = [
     color: "from-green-500/20 to-teal-500/20"
   },
   {
-    title: "AI Dev Intern",
+    title: "AI/ML Development Intern",
     company: "Vinfinet Technologies Pvt Ltd",
-    location: "Bengaluru, Karnataka, India · Remote",
-    period: "Jul 2025 – Present",
+    location: "Bengaluru, Karnataka, India - Hybrid",
+    period: "Jul 2025 - Dec 2025",
     description: [
-      "Developing Generative AI multimodal models for advanced sports analysis.",
-      "Building Agentic AI pipelines using LangGraph, LangChain, and RAG for intelligent decision-making.",
-      "Integrating YOLO-based vision systems with natural language understanding for real-time sports insights.",
-      "Optimizing Python-based workflows for scalable deployment."
+      "Built an end-to-end Generative AI and Computer Vision system for badminton match analysis, converting raw match videos into automated summaries, highlights, and question-answer insights.",
+      "Implemented an agentic Retrieval-Augmented Generation pipeline with locally deployed Phi-3 small language model inference.",
+      "Designed automated rally and highlight detection achieving about 75 percent IoU with hybrid YOLO-based player detection and shuttlecock tracking.",
+      "Integrated the system into a modular web architecture for video analysis workflows."
     ],
     icon: "⚡",
     color: "from-yellow-500/20 to-orange-500/20"
@@ -91,9 +117,15 @@ const experiences = [
 
 const positions = [
   {
+    title: "Member",
+    organization: "EIDS Lab, IIIT Sricity",
+    description: "Authored two conference publications and a book chapter while contributing to a funded TIHAN, IIT Hyderabad project in edge intelligence and federated learning.",
+    icon: "Lab"
+  },
+  {
     title: "Club Lead",
     organization: "Epoch (AI/ML Club, IIIT SriCity)",
-    description: "Coordinated AI/ML events and managed industry partnerships.",
+    description: "Led a 25+ member team organizing 10+ AI/ML workshops and hackathons with 500+ participants.",
     icon: "🧠"
   },
   {
@@ -105,7 +137,7 @@ const positions = [
   {
     title: "Sponsorship Lead",
     organization: "IIIT SriCity",
-    description: "Led outreach and secured sponsors for the annual fest Abhisarga.",
+    description: "Managed sponsor partnerships for Abhisarga and achieved 150 percent of the funding target.",
     icon: "💼"
   }
 ];
@@ -172,7 +204,7 @@ const Experience = () => {
                     className={cn(
                       "mt-4 pl-16 transition-all duration-300 overflow-hidden",
                       expandedExperience === index
-                        ? "max-h-96 opacity-100"
+                        ? "max-h-[40rem] opacity-100"
                         : "max-h-0 opacity-0"
                     )}
                   >
@@ -191,7 +223,7 @@ const Experience = () => {
           <div>
             <h3 className="text-2xl font-bold mb-8">Positions of Responsibility</h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {positions.map((position, idx) => (
                 <AnimatedCard
                   key={idx}
